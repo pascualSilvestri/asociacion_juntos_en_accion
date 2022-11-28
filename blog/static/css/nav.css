@@ -1,3 +1,39 @@
-body{
-    background-color: aqua;
+/* nav */
+nav{
+    width: 100%;
+    height: 3rem;
+    background-color: var(--fondo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+/* div del logo */
+.nav_div_logo{
+    width: 10%;
+    height: 100%;
+}
+/* imagen logo */
+.nav_img_logo{
+    width: 100%;
+    height: 100%;
+}
+/* ul dentro del nav */
+nav ul{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* li dentro del ul */
+
+.li_nav{
+    list-style: none;
+}
+
+/* a dentro del li */
+.nav_a{
+    text-decoration: none;
+    color: #bfbfbf;  /*momentaneo*/
+}
+

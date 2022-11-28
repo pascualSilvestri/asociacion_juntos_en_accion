@@ -6,9 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <title>MI WEB</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Asociacion Juntos en accion{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <h1>PRIMERA WEB</h1>
+    <nav>
+        <div class="nav_div_logo">
+            <img src="{% static 'img/logos_asociacion/Logo1.png' %}" alt="" class="nav_img_logo">
+        </div>
+        <ul>
+            <li class="li_nav nav_home"><a href="{% url 'home' %}" class="nav_a">Home</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Quienes somos</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Mision</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Vision</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Lugar</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Recursos</a></li>
+            <li class="li_nav"><a href="" class="nav_a">Contactos</a></li>
+            <li class="li_nav"><a href="{% url 'noticias' %}" class="nav_a">Noticias</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock  %}
+    <script src="{% static 'js/main.js'%}"></script>
 </body>
 </html>
