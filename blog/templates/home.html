@@ -7,25 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>Asociacion Juntos en accion{% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav>
         <div class="nav_div_logo">
-            <img src="{% static 'img/logos_asociacion/Logo1.png' %}" alt="" class="nav_img_logo">
+            <img src="{% static 'img/logos_asociacion/logo2-sin-fondo.png' %}" alt="logo de la asociacion" class="nav_img_logo">
         </div>
         <ul>
             <li class="li_nav nav_home"><a href="{% url 'home' %}" class="nav_a">Home</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Quienes somos</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Mision</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Vision</a></li>
+            <li class="li_nav"><a href="#quienes-somos" class="nav_a">Quienes somos</a></li>
+            <li class="li_nav"><a href="#mision" class="nav_a">Mision</a></li>
+            <li class="li_nav"><a href="#vision" class="nav_a">Vision</a></li>
             <li class="li_nav"><a href="" class="nav_a">Lugar</a></li>
             <li class="li_nav"><a href="" class="nav_a">Recursos</a></li>
             <li class="li_nav"><a href="" class="nav_a">Contactos</a></li>
             <li class="li_nav"><a href="{% url 'noticias' %}" class="nav_a">Noticias</a></li>
         </ul>
+        <div class="nav_login">
+            <button class="btn_login"><a href="" class="nav_a">Login</a></button>
+        </div>
     </nav>
-    {% block content %}{% endblock  %}
+    {% block content %}
+    <header>
+        <div class="header_div_titulo">
+            <h1>Titulo</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam asperiores magni modi et accusantium natus tempore blanditiis dolorum qui autem veniam nobis nam esse inventore ex, recusandae commodi explicabo vero.</p>
+        </div>
+        <div class="header_img">
+            <img class="img_logo_header" src="{% static 'img/logos_asociacion/logo2-letras.png' %}" alt="Logo de la asociacion">
+        </div>
+    </header>
+    <main>
+        <div class="main_card" id="quienes-somos">
+            <h2 class="main_titulo">Quienes somos</h2>
+            <p class="main_parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quasi, vitae totam sint accusantium rem, sapiente, minus magni fugiat qui beatae natus et id quae in nam placeat quisquam quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora sapiente id quas doloremque aperiam. Rem atque, illum, consectetur quo iure asperiores possimus illo, quidem officiis vitae velit quibusdam. Corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores ducimus illum consequatur provident ipsum libero nihil perferendis perspiciatis reprehenderit sint, quam optio reiciendis consequuntur. Consequuntur maxime eaque necessitatibus molestiae.</p>
+        </div>
+        <div class="main_card_sobre">
+            <div class="card_sobre" id="mision">
+                <h2 class="main_titulo">Mision</h2>
+                <p class="main_parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quasi, vitae totam sint accusantium rem, sapiente, minus magni fugiat qui beatae natus et id quae in nam placeat quisquam quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora sapiente id quas doloremque aperiam. Rem atque, illum, consectetur quo iure asperiores possimus illo, quidem officiis vitae velit quibusdam. Corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores ducimus illum consequatur provident ipsum libero nihil perferendis perspiciatis reprehenderit sint, quam optio reiciendis consequuntur. Consequuntur maxime eaque necessitatibus molestiae.</p>
+            </div>
+            <div class="card_sobre" id="vision">
+                <h2 class="main_titulo">Vision</h2>
+                <p class="main_parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quasi, vitae totam sint accusantium rem, sapiente, minus magni fugiat qui beatae natus et id quae in nam placeat quisquam quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora sapiente id quas doloremque aperiam. Rem atque, illum, consectetur quo iure asperiores possimus illo, quidem officiis vitae velit quibusdam. Corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores ducimus illum consequatur provident ipsum libero nihil perferendis perspiciatis reprehenderit sint, quam optio reiciendis consequuntur. Consequuntur maxime eaque necessitatibus molestiae.</p>
+            </div>
+        </div>
+
+    </main>
+    {% endblock  %}
+    <footer>
+        <p>Pie de pagina</p>
+    </footer>
     <script src="{% static 'js/main.js'%}"></script>
 </body>
 </html>
