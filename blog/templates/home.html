@@ -1,38 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>Asociacion Juntos en accion{% block title %}{% endblock %}</title>
-</head>
-<body>
-    <nav>
-        <div class="nav_div_logo">
-            <img src="{% static 'img/logos_asociacion/logo2-sin-fondo.png' %}" alt="logo de la asociacion" class="nav_img_logo">
-        </div>
-        <ul>
-            <li class="li_nav nav_home"><a href="{% url 'home' %}" class="nav_a">Home</a></li>
-            <li class="li_nav"><a href="#quienes-somos" class="nav_a">Quienes somos</a></li>
-            <li class="li_nav"><a href="#mision" class="nav_a">Mision</a></li>
-            <li class="li_nav"><a href="#vision" class="nav_a">Vision</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Lugar</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Recursos</a></li>
-            <li class="li_nav"><a href="" class="nav_a">Contactos</a></li>
-            <li class="li_nav"><a href="{% url 'noticias' %}" class="nav_a">Noticias</a></li>
-        </ul>
-        <div class="nav_login">
-            <button class="btn_login"><a href="" class="nav_a">Login</a></button>
-        </div>
-    </nav>
+
+
     {% block content %}
     <header>
         <div class="header_div_titulo">
@@ -58,12 +27,35 @@
                 <p class="main_parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quasi, vitae totam sint accusantium rem, sapiente, minus magni fugiat qui beatae natus et id quae in nam placeat quisquam quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora sapiente id quas doloremque aperiam. Rem atque, illum, consectetur quo iure asperiores possimus illo, quidem officiis vitae velit quibusdam. Corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores ducimus illum consequatur provident ipsum libero nihil perferendis perspiciatis reprehenderit sint, quam optio reiciendis consequuntur. Consequuntur maxime eaque necessitatibus molestiae.</p>
             </div>
         </div>
-
     </main>
+    <section class="lugar-contacto">
+        <div class="section_maps">
+            <h2 class="section_maps_titulo">Ubicacion</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.6859010894054!2d-60.4488329495542!3d-26.786280494311505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94412ce3c68bc62f%3A0x8c842a33abd51d5a!2sDorrego%20490%2C%20H3700IAJ%20S%C3%A1enz%20Pe%C3%B1a%2C%20Chaco!5e0!3m2!1ses!2sar!4v1669746446280!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="section_contacto">
+
+            <h2 class="section_contacto_titulo">Informacion de contacto</h2>
+
+            <div class="contacto_info">
+                <div class="info">
+                    <h3>Direccion de correo electronico: </h3>
+                    <ul>
+                        <li>uep143.sp.chaco@gmail.com</li>
+                        <li>sandraccpa@hotmail.com</li>
+                    </ul>
+                </div>
+                
+                <div class="info">
+                    <h3>Numero de telefono: </h3>
+                    <ul>
+                        <li>N° de la UEP: 3644733177</li>
+                        <li>N° de la presidente: 3644673583</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     {% endblock  %}
-    <footer>
-        <p>Pie de pagina</p>
-    </footer>
-    <script src="{% static 'js/main.js'%}"></script>
-</body>
-</html>

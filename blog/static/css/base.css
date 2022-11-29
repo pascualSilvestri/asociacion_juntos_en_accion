@@ -3,9 +3,7 @@
     --fondo-interno:#F4A261;
     --fondo-card: #E5E5E5;
     --fondo-nav: #14213D;
-    --negro:#2d2d2d;
-    --blanco:#ffffff;
-    --btn:#F4A261;
+    --letras:#2d2d2d;
     --family:'Roboto', sans-serif;
 }
 
@@ -22,11 +20,12 @@ body{
     width: 100vw;   
     background-color: var(--fondo-body);
     padding:1.5rem 4rem;
+    color:var(--letras)
 }
 
 footer{
     width: 100%;
-    height: 2rem;
+    height: 4rem;
     background-color: var(--fondo-nav);
     border-radius: 0 0 10px 10px;
 }
