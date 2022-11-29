@@ -4,7 +4,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    background-color: var(--fondo-card);
 }
 
 .main_card{
@@ -22,9 +22,9 @@ main{
     justify-content: space-evenly;
     align-items: center;
     height: 25rem;
-    background-color: #3333;
+    background-color: var(--fondo-card);
     padding-bottom: 2rem;
-
+    margin: 3rem 0;
 }
 
 .card_sobre{
@@ -35,11 +35,10 @@ main{
     width: 40%;
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px 10px #777;
 }
 
 .main_titulo{
-    color: #ddd;
+    color: var(--negro);
     width: 70%;
     text-align: center;
 }
@@ -47,17 +46,17 @@ main{
 .main_parrafo{
     width: 70%;
     text-align: justify;
-    color:#ddd;
+    color:var(--negro);
 }
 
 #quienes-somos{
-    background-color: #3333;
+    
 }
 
 #mision{
-    background-color: #3337;
+    background-color: var(--fondo-interno);
 }
 
 #vision{
-    background-color: #3337;
+    background-color: var(--fondo-interno);
 }

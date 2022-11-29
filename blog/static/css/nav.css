@@ -2,7 +2,7 @@
 nav{
     width: 100%;
     height: 4rem;
-    background-color:#3337;
+    background-color:var(--fondo-nav);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +59,7 @@ nav ul{
 .btn_login{
     width: 100%;
     height: 100%;
-    background-color: #dfdfdf;
+    background-color: var(--btn);
     border: none;
     border-radius: 0px 10px 0px 0px ;
 }

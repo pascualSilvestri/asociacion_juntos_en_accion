@@ -10,5 +10,3 @@ if (title != titulo){
 }
 // fin del bloque 
 
-
-const body = document.querySelector('body');
