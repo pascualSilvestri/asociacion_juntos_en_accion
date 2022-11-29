@@ -1,3 +1,75 @@
-body{
-    background-color: aqua;
+/* nav */
+nav{
+    width: 100%;
+    height: 4rem;
+    background-color:var(--fondo-nav);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    border-radius: 10px 10px 0px 0px ;
+}
+/* div del logo */
+.nav_div_logo{
+    width: 10%;
+    height: 100%;
+}
+
+/* imagen logo */
+.nav_img_logo{
+    width: 70%;
+    height: 100%;
+}
+/* ul dentro del nav */
+nav ul{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* li dentro del ul */
+
+.li_nav{
+    list-style: none;
+    padding: 5px 0;
+}
+
+.li_nav:hover{
+    border-top: 1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+
+/* a dentro del li */
+.nav_a{
+    text-decoration: none;
+    color: #bfbfbf;  /*momentaneo*/
+}
+
+/* div contenedor del login */
+.nav_login{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* li dentro del login */
+.btn_login{
+    width: 100%;
+    height: 100%;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 0px 10px 0px 0px ;
+}
+
+.btn_login:hover{
+    border-radius: 10px 10px 10px 10px ;
+}
+
+.btn_login a{
+    color:black;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
