@@ -1,7 +1,7 @@
 /* nav */
 nav{
     width: 100%;
-    height: 4rem;
+    height:5rem;
     background-color:var(--fondo-nav);
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ nav ul{
 /* a dentro del li */
 .nav_a{
     text-decoration: none;
-    color: #bfbfbf;  /*momentaneo*/
+    color: #d2d2d2;
 }
 
 /* div contenedor del login */
