@@ -46,6 +46,10 @@ nav ul{
     color: #d2d2d2;
 }
 
+.nav_a:hover{
+    font-weight: bold;
+}
+
 /* div contenedor del login */
 .nav_login{
     width: 10%;
