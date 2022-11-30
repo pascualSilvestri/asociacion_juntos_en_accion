@@ -8,3 +8,6 @@ def Home(request):
 
 def Noticias(request):
     return render(request, 'noticias.html')
+
+def Recursos(request):
+    return render(request, 'recursos.html')

@@ -22,4 +22,5 @@ urlpatterns = [
     
     path('',view.Home, name = 'home'),
     path("noticias/",view.Noticias, name="noticias"),
+    path('recursos/', view.Recursos, name= 'recursos')
 ]

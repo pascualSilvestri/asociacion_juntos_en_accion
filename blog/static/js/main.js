@@ -3,6 +3,8 @@ const titulo = document.title;
 const home = document.querySelector('.nav_home');
 const title = 'Asociacion Juntos en accion'
 
+console.log(titulo)
+
 if (title != titulo){
     home.style.display = 'flex'
 }else{
