@@ -1,0 +1,115 @@
+nav{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fondo-header);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.logo h1{
+    color:var(--fondo-principal);
+    font-size: 2.2rem;
+    font-weight: 100;
+}
+
+.logo p{
+    color:#fff;
+    font-size: 1.2rem;
+    font-family: var( --family-verdana);
+}
+
+.contenedor_nav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation{
+    width: 60%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    background-color: var(--fondo-nav);
+    border: 2px solid rgb(97,97,97);
+    margin-right: 1rem;
+    flex: 4;
+}
+
+.navigation ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navigation ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+
+
+.navigation ul>li:hover{
+    background-color: var(--fondo-principal);
+    transition: 0.6s;
+}
+
+.navigation ul li>a{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--family-verdana);
+}
+
+.login{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: var(--fondo-nav);
+    border: 2px solid rgb(97,97,97);
+    flex:1;
+}
+.span_login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+}
+
+.span_login:hover{
+    background-color: var(--fondo-principal);
+}
+
+.login a{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--family-verdana);
+}
+

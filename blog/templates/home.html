@@ -1,57 +1,78 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static %}  
 
-
-    {% block content %}
-    <header>
-        <div class="header_div_titulo">
-            <h1>Ultimas noticias</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam asperiores magni modi et accusantium natus tempore blanditiis dolorum qui autem veniam nobis nam esse inventore ex, recusandae commodi explicabo vero.</p>
-        </div>
-        <div class="header_img">
-            <img class="img_logo_header" src="{% static 'img/logos_asociacion/logo2-letras.png' %}" alt="Logo de la asociacion">
+    {% block contenedor %}
+    <header class="info">
+        <div class="contenedorInfo">
+            <div class="header_text">
+                <h2>ASOCIACIÓN</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ratione, harum quo adipisci
+                    consectetur voluptate asperiores officia dolores dolorem quaerat excepturi cum nisi vitae quidem
+                    earum ipsa eligendi exercitationem et minima molestiae iste! Autem cum vitae aut ipsam mollitia
+                    quidem vero ab amet alias odio, repellendus facere perspiciatis hic debitis commodi nulla dolore
+                    dolor quas ipsum provident. Non, nulla labore.</p>
+            </div>
+            <div class="header_imagenes">
+                <div class="img1">
+                    <img src="{% static 'img/logoPrincipal.png'%}" alt="Logo-Principal" class="imagen1">
+                </div>
+                <div class="img2">
+                    <img src="{% static 'img/logoEscuela.png'%}" alt="Logo-Escuela" class="imagen2">
+                </div>
+            </div>
         </div>
     </header>
-    <main id="quienes-somos">
-        <div class="main_card" >
-            <h2 class="main_titulo">Quienes somos</h2>
-            <p class="main_parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quasi, vitae totam sint accusantium rem, sapiente, minus magni fugiat qui beatae natus et id quae in nam placeat quisquam quis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora sapiente id quas doloremque aperiam. Rem atque, illum, consectetur quo iure asperiores possimus illo, quidem officiis vitae velit quibusdam. Corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores ducimus illum consequatur provident ipsum libero nihil perferendis perspiciatis reprehenderit sint, quam optio reiciendis consequuntur. Consequuntur maxime eaque necessitatibus molestiae.</p>
-        </div>
-        <div class="main_card_sobre" id="mision">
-            <div class="card_sobre" >
-                <h2 class="main_titulo">Mision-Vision</h2>
-                <p class="main_parrafo">Para los que formamos Juntos en Acción las personas con discapacidad son titulares de los mismos derechos fundamentales que el resto de los ciudadanos. Creemos en una concepción donde las personas con discapacidad poseen facultad para decidir sobre sus propias vidas, mientras su discapacidad no impida esto, en oposición a una concepción paternalista como la que rige aun en estos tiempos. las personas con discapacidad reclaman la igualdad de oportunidades y es nuestro deber ayudarlos a que lo puedan lograr.</p>
+    <main class="main">
+        <div class="main_contenedor_noticia">
+            <div class="main_noticia">
+                <h2>Título Noticia 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minus, nam quasi incidunt quibusdam
+                    totam enim porro accusantium deleniti cum harum ad consectetur ipsum! Ut fugiat amet tenetur
+                    suscipit saepe numquam, dicta, perferendis quia quas nisi non quam a dignissimos error porro tempore
+                    aperiam unde? Placeat maxime illum qui ullam itaque recusandae officiis blanditiis libero voluptate!
+                    Aspernatur laudantium velit, laboriosam accusantium iure illo, numquam ab quas quae quos quisquam
+                    ipsam temporibus. Debitis enim unde magni excepturi, quidem impedit facere id autem illum architecto
+                    corrupti atque voluptate saepe dolores. Dolorem laborum consectetur perspiciatis nisi explicabo
+                    ratione labore in dicta saepe aspernatur. Eveniet vitae repellat ex laudantium quidem cupiditate
+                    harum architecto, maxime, sunt veniam quod? Quas amet, vel corporis magnam harum ab sapiente quo
+                    tenetur consectetur voluptatibus illum perspiciatis numquam, aliquid molestias iure fugit dolorum ea
+                    dignissimos. Sapiente, tenetur praesentium beatae excepturi alias impedit error et laboriosam porro,
+                    doloremque id? At, similique!.</p>
+            </div>
+            <div class="main_noticia">
+                <h2>Título Noticia 2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, vel ex. Non saepe, modi veniam
+                    nulla laboriosam iusto quidem quaerat asperiores nobis omnis quam quae similique officia cupiditate.
+                    Perferendis error voluptatem nihil cum velit quo, soluta aspernatur exercitationem fugiat blanditiis
+                    dicta nisi tempore nesciunt repellat eveniet delectus in esse reprehenderit praesentium. Corrupti,
+                    ratione officiis iusto magnam libero enim, voluptatum aperiam ad numquam, omnis dicta dolorum?
+                    Laudantium excepturi est, possimus cupiditate vero aut minima eveniet omnis nostrum adipisci ea
+                    suscipit deserunt veniam tenetur. Asperiores enim iste illo, quod aperiam ad dolore harum et
+                    incidunt consectetur unde aspernatur quaerat natus ducimus ipsa mollitia. Earum itaque id impedit
+                    repellat, alias, eos reiciendis adipisci qui nihil labore fugiat nisi nam voluptas aut amet
+                    asperiores quia exercitationem eligendi pariatur. A, ullam consequatur culpa vel dolore quisquam
+                    recusandae eveniet sint eum incidunt iste sequi quidem! Eum voluptates voluptatibus odit molestiae,
+                    animi rerum delectus nam incidunt corporis?</p>
+            </div>
+            <div class="main_noticia">
+                <h2>Título Noticia 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit a magnam, vitae natus, sed quia
+                    expedita exercitationem error cumque labore eos numquam. Facere doloremque odit vel accusantium
+                    error dolor, quaerat enim omnis necessitatibus voluptas? Incidunt aut repudiandae culpa impedit
+                    voluptatibus iusto iste distinctio laborum iure at ipsum, optio dolore ut eos ducimus fugit
+                    doloremque et minima accusamus id ex. Architecto, fuga et, cumque nesciunt molestiae saepe magni
+                    sequi adipisci cum distinctio, voluptatibus libero sapiente. At sapiente modi officiis ratione
+                    repellat doloribus dolorum alias sit. A vel vitae ipsa obcaecati, expedita natus veritatis dolorem
+                    corrupti sapiente! Officia minima labore eligendi iure obcaecati. Pariatur quas dicta aspernatur ad
+                    id officiis odit doloremque inventore repudiandae debitis? Quaerat sint ea, earum consequatur iure,
+                    minima aliquam voluptate harum doloribus itaque nisi ipsum id error ipsam atque voluptatem autem
+                    repudiandae expedita cupiditate iste delectus eveniet adipisci distinctio iusto. Ea ex nostrum
+                    mollitia impedit consectetur optio aut.</p>
             </div>
         </div>
     </main>
-    <section class="lugar-contacto">
-        <div class="section_maps">
-            <h2 class="section_maps_titulo">Ubicacion</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.6859010894054!2d-60.4488329495542!3d-26.786280494311505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94412ce3c68bc62f%3A0x8c842a33abd51d5a!2sDorrego%20490%2C%20H3700IAJ%20S%C3%A1enz%20Pe%C3%B1a%2C%20Chaco!5e0!3m2!1ses!2sar!4v1669746446280!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-
-        <div class="section_contacto" id="contacto">
-
-            <h2 class="section_contacto_titulo">Informacion de contacto</h2>
-
-            <div class="contacto_info">
-                <div class="info">
-                    <h3>Direccion de correo electronico: </h3>
-                    <ul>
-                        <li>uep143.sp.chaco@gmail.com</li>
-                        <li>sandraccpa@hotmail.com</li>
-                    </ul>
-                </div>
-                
-                <div class="info">
-                    <h3>Numero de telefono: </h3>
-                    <ul>
-                        <li>N° de la UEP: 3644733177</li>
-                        <li>N° de la presidente: 3644673583</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
     {% endblock  %}
+
+</body>
+
+</html>

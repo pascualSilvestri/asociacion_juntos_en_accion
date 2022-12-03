@@ -1,0 +1,20 @@
+:root{
+    /* Se utiliza para crear variables que puedan ser usadas en todos los archivos css del proyecto */
+    --fondo-principal:#b2c629;
+    --fondo-header:rgb(29,29,29);
+    --fondo-nav:rgb(41,41,41);
+    --family-verdana:Verdana ,Geneva, Tahoma, sans-serif;
+    --family-georgia:Georgia,"Time New Roman", Times, serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+}
