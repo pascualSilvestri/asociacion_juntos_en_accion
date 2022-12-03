@@ -4,11 +4,13 @@ const home = document.querySelector('.home');
 const mision = document.querySelector('.mision');
 const recursos = document.querySelector('.recursos');
 const noticias = document.querySelector('.noticias')
+const btnArriva = document.querySelector(".up")
 
 const title = 'Asociacion Juntos en accion |'
 const tituloNoticia = 'Asociacion Juntos en accion | noticias'
 const tituloRecursos = 'Asociacion Juntos en accion | recursos'
 
+btnArriva.style.display = "none"
 console.log(titulo)
 console.log(tituloNoticia)
 
@@ -33,3 +35,14 @@ if(tituloRecursos == titulo){
 }
 // fin del bloque 
 
+
+document.addEventListener("scroll", e => {
+    let scrolly = e.path[1].window.scrollY
+    if (scrolly >= 200) {
+        btnArriva.style.display = "flex"
+    }
+    if (scrolly < 200) {
+        btnArriva.style.display = "none"
+    }
+
+});

@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -18,3 +19,25 @@ body{
     height: 100vh;
     min-height: 100vh;
 }
+
+
+.up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--fondo-nav);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    padding-top: .5rem;
+}
+
+.up a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+}
+
