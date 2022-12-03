@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/main/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer/footer.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>Asociacion Juntos en accion{% block title %}{% endblock %}</title>
+    <title>Asociacion Juntos en accion |{% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav class="nav">
@@ -22,35 +22,37 @@
         <div class="contenedor_nav">
             <div class="navigation">
                 <ul>
-                    <li>
-                        <a href="#">Nosotros</a>
+                    <li class="home">
+                        <a  href="{% url 'home'%}">Home</a>
                     </li>
-                    <li>
-                        <a href="#">Misión</a>
+                    <li class="mision">
+                        <a  href="#">Misión</a>
                     </li>
-                    <li>
-                        <a href="#">Lugar</a>
+                    <li class="recursos">
+                        <a  href="{% url 'recursos' %}">Recursos</a>
                     </li>
-                    <li>
-                        <a href="{% url 'recursos' %}">Recursos</a>
+                    <li class="contacto">
+                        <a  href="#footer">Contactos</a>
                     </li>
-                    <li>
-                        <a href="#">Contactos</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'noticias' %}">Noticias</a>
+                    <li class="noticias">
+                        <a  href="{% url 'noticias' %}">Noticias</a>
                     </li>
                 </ul>
             </div>
             <div class="login">
+                {% comment %} user.is_authenticated  {% endcomment %}
+                {% if False %}
+                <span class="span_login"><a href="#">Logout</a></span>
+                {% else %}
                 <span class="span_login"><a href="#">Login</a></span>
                 <span class="span_login"><a href="#">Registrar</a></span>
+                {% endif %}
             </div>
         </div>
     </nav>
     {% block contenedor %}
     {% endblock  %}
-    <footer>
+    <footer id="footer">
         <p class="info2">Pagina creada por @Grupo 7 Informatorio</p>
     </footer>
     <script src="{% static 'js/main.js'%}"></script>

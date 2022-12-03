@@ -111,5 +111,6 @@ nav{
     text-decoration: none;
     color: #fff;
     font-family: var(--family-verdana);
+    margin: 0 5px;
 }
 
