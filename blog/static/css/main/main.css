@@ -28,7 +28,7 @@ main{
     align-items: flex-start;
     background-color: var(--fondo-principal);
     color:#444;
-    padding: 2rem;
+    padding: 2rem 3rem;
     margin: 4rem 0;
     border-radius: 20px;
     box-shadow: 0 0 10px 1px #333;
@@ -48,4 +48,5 @@ main{
     font-size: .9rem;
     margin-bottom: .5rem;
     text-align: justify;
+    list-style:circle;
 }
