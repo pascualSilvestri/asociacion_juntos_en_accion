@@ -5,6 +5,8 @@ const mision = document.querySelector('.mision');
 const recursos = document.querySelector('.recursos');
 const noticias = document.querySelector('.noticias')
 const btnArriva = document.querySelector(".up")
+const menu = document.querySelector('.contenedor_nav');
+const btnMenu = document.querySelector('.menu')
 
 const title = 'Asociacion Juntos en accion |'
 const tituloNoticia = 'Asociacion Juntos en accion | noticias'
@@ -45,4 +47,9 @@ document.addEventListener("scroll", e => {
         btnArriva.style.display = "none"
     }
 
+});
+
+
+btnMenu.addEventListener('click', (e)=>{
+    menu.classList.toggle("mostrar")
 });
