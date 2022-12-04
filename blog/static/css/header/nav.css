@@ -124,6 +124,14 @@ nav{
 
 @media only screen and (max-width: 768px){
     
+    .navigation ul li>a{
+        font-size: 4rem;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    
     .logo{
         width: 40%;
     }
@@ -146,20 +154,23 @@ nav{
     }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 426px){
     nav{
         padding: 0;
+        z-index: 10;
     }
     .contenedor_nav{
         width: 100vw;
         height: 85vh;
         position:fixed;
         top:6rem;
+        left: 100rem;
         margin: 0;
         background-color: var(--family-verdana);
         justify-content: space-around;
         flex-direction: column;
-        display: none;
+        transition: 1s;
+        z-index: 1;
     }
 
     .navigation{
@@ -170,7 +181,7 @@ nav{
         background-color: var(--fondo-nav);
         border: 2px solid rgb(97,97,97);
         margin-right: 0;
-        flex: 4;
+        flex: 2;
     }
 
     .navigation ul{
@@ -197,7 +208,8 @@ nav{
     }
 
     .mostrar{
-        display: flex;
+        top:6rem;
+        left: 0;
     }
     
 }
