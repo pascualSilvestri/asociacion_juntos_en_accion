@@ -56,7 +56,6 @@ header{
 .img2{
     width: 45%;
     height: 100%;
-
 }
 
 .imagen2{
@@ -85,9 +84,6 @@ header{
         border-bottom: 10px solid #000;
     }
 
-    .header_text{
-
-    }
     
     .header_text h2{
        font-size: 1rem;
@@ -107,6 +103,107 @@ header{
 
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 768px){
+    header{
+        width: 100%;
+        height: 40vh;
+        background-color: var(--fondo-principal);
+        padding: 2rem;
+        border-bottom: 10px solid #000;
+    }
+
+    .contenedorInfo{
+        justify-content: center;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .header_imagenes{
+        margin-top: 2rem;
+        width: 100%;
+        height: 50%;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+    .img1{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .img2{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+    .header_text{
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header_text p{
+
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width:450px){
+    header{
+        width: 100%;
+        height: 60vh;
+        background-color: var(--fondo-principal);
+        padding: 2rem;
+        border-bottom: 10px solid #000;
+    }
+
+    .contenedorInfo{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header_text{
+        height: 50%;
+        margin-top: 2rem;
+    }
     
+    .header_text p{
+        margin-top: 1.5rem;
+        font-size: .7rem;
+    }
+
+    .header_imagenes{
+        margin-top: 2rem;
+        width: 100%;
+        height: 50%;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+    .img1{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .img2{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }

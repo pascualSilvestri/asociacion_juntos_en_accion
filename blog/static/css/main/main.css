@@ -50,3 +50,54 @@ main{
     text-align: justify;
     list-style:circle;
 }
+
+@media only screen and (max-width: 768px){
+
+    .card_info{
+        height: 25vh;
+    }
+    .card_info p{
+        font-size: .7rem;
+        text-align: justify;
+    }
+
+    .card_info ul>li{
+        font-size: .7rem;
+        margin-bottom: .5rem;
+        text-align: justify;
+        list-style:circle;
+    }
+
+    .main_contacto{
+        height: 20vh;
+    }
+
+    iframe{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .card_info{
+        width: 90%;
+        height: 40vh;
+        margin: 2rem 0;
+        padding: .5rem 1rem;
+    }
+    
+
+    .card_info h2{
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .card_info p{
+        font-size: .5rem;
+        text-align: justify;
+    }
+
+    .card_info ul>li{
+        font-size: .5rem;
+    }
+}
