@@ -44,12 +44,12 @@
             </div>
             <div class="login">
                 {% comment %} user.is_authenticated  {% endcomment %}
-                {% if True %}
-                <span class="span_login"><a href="#">Logout</a></span>
-                <p class="bienvenido">Hola pascual, bienvenido</p>
+                {% if user.is_authenticated %}
+                <span class="span_login"><a href="{% url 'logout' %}">Logout</a></span>
+                <p class="bienvenido">Hola {{user.username}}, bienvenido</p>
                 {% else %}
-                <span class="span_login"><a href="#">Login</a></span>
-                <span class="span_login"><a href="#">Registrar</a></span>
+                <span class="span_login"><a href="{% url 'login' %}">Login</a></span>
+                <span class="span_login"><a href="{% url 'usuarios:registro' %}">Registrar</a></span>
                 {% endif %}
             </div>
         </div>
