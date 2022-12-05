@@ -1,12 +1,32 @@
-{% extends 'base.html' %}
-{% load static %}
-
+{% extends 'base.html' %} {% load static %} {% block title %} Login{% endblock%}
 {% block contenedor %}
-			<form method="POST">{%csrf_token%}
-			{{form.errors}}
-				<input type="text" name="username" placeholder="USUARIO">
-				<input type="password" name="password" placeholder="PASSWORD">
-
-				<input type="submit" name="" value="ENVIAR">
-			</form>
+<main class="main-login" role="main">
+  <h3 class="mb-4">Ingreso de usuario</h3>
+  <div class="container">
+    <div class="container">
+        <div class="img-forms div-img-left">
+          <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
+        </div>
+    <form class="form-registrar" method="POST">
+      {%csrf_token%} {{form.errors}}
+      <div class="contenedor_input">
+        <label for="nombre">Nombre </label>
+        <input type="text" name="username" id="nombre" placeholder="USUARIO" />
+      </div>
+      <div class="contenedor_input">
+        <label for="password1">Contraseña </label>
+        <input
+          type="password"
+          name="password"
+          id="password1"
+          placeholder="PASSWORD"
+        />
+      </div>
+      <input type="submit" class="btn-registrar" name="" value="ENVIAR" />
+    </form>
+    <div class="img-forms">
+        <img src="{% static 'img/logoEscuela.png'%}" alt="logo" />
+      </div>
+  </div>
+</main>
 {% endblock %}

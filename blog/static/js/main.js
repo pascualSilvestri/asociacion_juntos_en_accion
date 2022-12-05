@@ -9,8 +9,10 @@ const menu = document.querySelector('.contenedor_nav');
 const btnMenu = document.querySelector('.menu')
 
 const title = 'Asociacion Juntos en accion |'
-const tituloNoticia = 'Asociacion Juntos en accion | noticias'
-const tituloRecursos = 'Asociacion Juntos en accion | recursos'
+const tituloNoticia = 'Asociacion Juntos en accion | Noticias'
+const tituloRecursos = 'Asociacion Juntos en accion | Recursos'
+const tituloRegistrar = 'Asociacion Juntos en accion | Registrar'
+const tituloLogin = 'Asociacion Juntos en accion | Login'
 
 btnArriva.style.display = "none"
 console.log(titulo)

@@ -1,19 +1,51 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}registro{% endblock %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Registro{%endblock%} 
 {% block contenedor %}
 
-<main role="main">
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-md-9 mx-auto mb-5">
-          <form action="" method="post">{% csrf_token %}         
-           <h3 class="mb-4">Registro</h3>
-            {{form.as_p}}
-            <p><input type="submit" class="btn btn-primary btn-block" value="Confirmar"></p>
-          </form>
-        </div>
-      </div>
+<main class="main-registrar" role="main">
+<h3 class="mb-4">Registro de usuario</h3>
+  <div class="container">
+    <div class="img-forms div-img-left">
+      <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
     </div>
-  </main>
+    <form class="form-registrar" action="" method="post">
+      {% csrf_token %}
+      {% comment %} {{form.as_p}} {% endcomment %}
+      <div class="contenedor_input">
+        <label for="nombre">Nombre </label>
+        <input type="text" name="{{form.first_name.name}}" id="nombre" />
+      </div>
+
+      <div class="contenedor_input">
+        <label for="apellido">Apellido </label>
+        <input type="text" name="{{form.last_name.name}}" id="apellido" />
+      </div>
+
+      <div class="contenedor_input">
+        <label for="usuario">Usuario </label>
+        <input type="text" name="{{form.username.name}}" id="usuario" />
+      </div>
+
+      <div class="contenedor_input">
+        <label for="email">email </label>
+        <input type="email" name="{{form.email.name}}" id="email" />
+      </div>
+
+      <div class="contenedor_input">
+        <label for="password1">Contraseña </label>
+        <input type="password" name="{{form.password1.name}}" id="password1" />
+      </div>
+
+      <div class="contenedor_input">
+        <label for="password2">Repetir contraseña </label>
+        <input type="password" name="{{form.password2.name}}" id="password2" />
+      </div>
+        <input type="submit" class="btn-registrar" value="Confirmar"/>
+    </form>
+    <div class="img-forms">
+      <img src="{% static 'img/logoEscuela.png'%}" alt="logo" />
+    </div>
+  </div>
+</main>
 {% endblock %}
