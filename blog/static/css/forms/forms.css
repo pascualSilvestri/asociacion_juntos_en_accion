@@ -70,7 +70,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 10px 10px;
     margin: .5rem 0 0 0;
 }
 
@@ -93,7 +93,7 @@
     height: 1.5rem;
     border: none;
     outline: none;
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 10px;
 }
 
 .contenedor_input input::placeholder{
@@ -109,5 +109,3 @@
     background-color: var(--fondo-nav);
     color: #f0f0f0;
 }
-
-

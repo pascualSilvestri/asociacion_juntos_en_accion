@@ -12,32 +12,32 @@
     <form class="form-registrar" action="" method="post">
       {% csrf_token %}
       {% comment %} {{form.as_p}} {% endcomment %}
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_nombre">
         <label for="nombre">Nombre </label>
         <input type="text" name="{{form.first_name.name}}" id="nombre" />
       </div>
 
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_apellido">
         <label for="apellido">Apellido </label>
         <input type="text" name="{{form.last_name.name}}" id="apellido" />
       </div>
 
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_usuario">
         <label for="usuario">Usuario </label>
         <input type="text" name="{{form.username.name}}" id="usuario" />
       </div>
 
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_email">
         <label for="email">email </label>
         <input type="email" name="{{form.email.name}}" id="email" />
       </div>
 
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_password1">
         <label for="password1">Contraseña </label>
         <input type="password" name="{{form.password1.name}}" id="password1" />
       </div>
 
-      <div class="contenedor_input">
+      <div class="contenedor_input cont_password2">
         <label for="password2">Repetir contraseña </label>
         <input type="password" name="{{form.password2.name}}" id="password2" />
       </div>
