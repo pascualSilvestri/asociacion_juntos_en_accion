@@ -21,7 +21,7 @@ main{
 
 .card_info{
     width: 80%;
-    height: 40vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -54,7 +54,7 @@ main{
 @media only screen and (max-width: 768px){
 
     .card_info{
-        height: 25vh;
+        height: auto;
     }
     .card_info p{
         font-size: .7rem;
@@ -81,7 +81,7 @@ main{
 @media only screen and (max-width:450px){
     .card_info{
         width: 90%;
-        height: 40vh;
+        height: auto;
         margin: 2rem 0;
         padding: .5rem 1rem;
     }

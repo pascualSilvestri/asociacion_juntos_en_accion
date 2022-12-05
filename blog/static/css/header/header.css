@@ -4,6 +4,7 @@ header{
     background-color: var(--fondo-principal);
     padding: 2rem;
     border-bottom: 10px solid #000;
+    position: relative;
 }
 
 .contenedorInfo{
@@ -45,21 +46,43 @@ header{
 
 .img1{
     width: 45%;
-    height: 140%;
+    height: 130%;
 }
 
 .imagen1{
     width: 100%;
+    height: 100%;
     filter: drop-shadow(0 2px 10px #000);
 }
 
 .img2{
     width: 45%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagen2{
     width: 100%;
+    height: 80%;
+}
+
+.bienvenido{
+    width: auto;
+    height: auto;
+    padding: .8rem 1rem 1rem 2rem;
+    background-color: #3339;
+    position: absolute;
+    top:95px;
+    right: 0;
+    border-radius: 0 0 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--family-verdana);
+    font-size: 1rem;
 }
 
 
@@ -78,7 +101,7 @@ header{
 
     header{
         width: 100%;
-        height: 30vh;
+        min-height: 20vh;
         background-color: var(--fondo-principal);
         padding: 2rem;
         border-bottom: 10px solid #000;
@@ -106,7 +129,7 @@ header{
 @media only screen and (max-width: 768px){
     header{
         width: 100%;
-        height: 40vh;
+        height: auto;
         background-color: var(--fondo-principal);
         padding: 2rem;
         border-bottom: 10px solid #000;
@@ -118,12 +141,17 @@ header{
         flex-direction: column-reverse;
     }
 
+    .header_text{
+        margin-top: 2rem;
+    }
+
     .header_imagenes{
         margin-top: 2rem;
         width: 100%;
         height: 50%;
         align-self: center;
         justify-content: space-around;
+        align-items: center;
     }
 
     .img1{
