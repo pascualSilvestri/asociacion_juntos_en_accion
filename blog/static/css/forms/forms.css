@@ -1,0 +1,113 @@
+.main-login{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--family-verdana);
+    color: #333;
+    font-size: 2rem;
+}
+.main-registrar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--family-verdana);
+    color: #333;
+    font-size: 2rem;
+}
+
+.main-registrar h3{
+    margin: 1rem 0;
+}
+
+.container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-forms{
+    width: 30%;
+    height: 50%;
+}
+
+.div-img-left{
+    height: 80%;
+}
+
+.img-forms img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 10px #3337);
+}
+
+.form-registrar{
+    width: 30%;
+    height:auto;
+    background-color: var(--fondo-principal);
+    border-radius: 30px;
+    margin: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-family: var(--family-verdana);
+    box-shadow: 0 0 10px 3px #3337;
+    margin-bottom: 2rem;
+}
+
+.contenedor_input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    margin: .5rem 0 0 0;
+}
+
+.contenedor_input label{
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 10px 10px 0 0;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: .7rem;
+    color:#333;
+    font-weight: 800;
+    background-color: #f0f0f0;
+}
+
+.contenedor_input input{
+    width: 100%;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0 0 10px 0;
+}
+
+.contenedor_input input::placeholder{
+    padding-left: 10px;
+}
+
+.btn-registrar{
+    margin-top: 1rem;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--fondo-nav);
+    color: #f0f0f0;
+}
+
+
