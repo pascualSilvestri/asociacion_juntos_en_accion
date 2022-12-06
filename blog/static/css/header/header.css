@@ -3,7 +3,7 @@ header{
     height: 23rem;
     background-color: var(--fondo-principal);
     padding: 2rem;
-    border-bottom: 10px solid #000;
+    border-bottom: 10px solid rgb(59, 59, 59);
     position: relative;
 }
 
@@ -76,13 +76,14 @@ header{
     position: absolute;
     top:95px;
     right: 0;
-    border-radius: 0 0 0 50px;
+    border-radius: 0 0 0 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-family: var(--family-verdana);
     font-size: 1rem;
+    box-shadow: 2px 2px 5px 0 black;
 }
 
 
