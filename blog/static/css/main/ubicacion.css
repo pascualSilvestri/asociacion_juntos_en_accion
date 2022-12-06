@@ -28,3 +28,10 @@
 iframe{
     border-radius: 20px;
 }
+
+@media only screen and (max-width:550px){
+    .maps{
+        border-radius: 0;
+        width: 100%;
+    }
+}

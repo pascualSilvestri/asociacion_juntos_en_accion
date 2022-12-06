@@ -125,13 +125,6 @@ nav{
 
 /* Responsividad */
 
-@media only screen and (max-width: 768px){
-    
-    .navigation ul li>a{
-        font-size: 4rem;
-    }
-}
-
 
 @media only screen and (max-width: 768px){
     
@@ -157,7 +150,11 @@ nav{
     }
 }
 
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 550px){
+
+    .bienvenido{
+        display: none;
+    }
     nav{
         padding: 0;
         z-index: 10;

@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .card_telf{
@@ -19,6 +20,7 @@
 .telf_titulo{
     margin-bottom:1rem;
     color: #333;
+    font-family: var(--family-verdana);
 }
 
 .ul_telf{
@@ -32,13 +34,15 @@
 .ul_telf li a{
     text-decoration: none;
     color:#333;
+    font-family: var(--family-verdana);
 }
 
 
-@media only screen and (max-width:450px){
+@media only screen and (max-width:550px){
     
     .main_telf{
         flex-direction: column;
+        padding: 1rem;
     }
 
     .card_telf{
@@ -55,4 +59,7 @@
         margin-bottom: .5rem;
     }
     
+    .ul_telf li a{
+        font-size: .8rem;
+    }
 }
