@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,7 @@
             <div class="navigation">
                 <ul>
                     <li class="home">
-                        <a  href="{% url 'home'%}">Home</a>
+                        <a  href="{% url 'home'%}">inicio</a>
                     </li>
                     <li class="mision">
                         <a  href="#mision">Misión</a>
@@ -46,11 +46,11 @@
             <div class="login">
                 {% comment %} user.is_authenticated  {% endcomment %}
                 {% if user.is_authenticated %}
-                <span class="span_login"><a href="{% url 'logout' %}">Logout</a></span>
-                <p class="bienvenido">Hola {{user.username}}, bienvenido</p>
+                <span class="span_login"><a href="{% url 'logout' %}">Cerrar Sesión</a></span>
+                <p class="bienvenido">Hola {{user.username | title}}, nos gusta verte de nuevo</p>
                 {% else %}
-                <span class="span_login"><a href="{% url 'login' %}">Login</a></span>
-                <span class="span_login"><a href="{% url 'usuarios:registro' %}">Registrar</a></span>
+                <span class="span_login"><a href="{% url 'login' %}">Ingresar</a></span>
+                <span class="span_login"><a href="{% url 'usuarios:registro' %}">Registrarse</a></span>
                 {% endif %}
             </div>
         </div>
