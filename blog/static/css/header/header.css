@@ -233,5 +233,7 @@ header{
         align-items: center;
     }
 
-
+    .bienvenido{
+        display: none;
+    }
 }

@@ -7,7 +7,7 @@
         <div class="img-forms div-img-left">
           <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
         </div>
-    <form class="form-registrar" method="POST">
+    <form class="form-registrar form-login" method="POST">
       {%csrf_token%} {{form.errors}}
       <div class="contenedor_input">
         <label for="nombre">Nombre </label>

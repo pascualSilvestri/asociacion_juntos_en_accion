@@ -1,6 +1,6 @@
 .main-login{
     width: 100%;
-    height: 30rem;
+    min-height: calc(100% - 12rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@
 }
 .main-registrar{
     width: 100%;
-    height: auto;
+    height: calc(100% - 12rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,10 +94,11 @@
     border: none;
     outline: none;
     border-radius: 0 0 10px 10px;
+    padding-left: .5rem;
 }
 
-.contenedor_input input::placeholder{
-    padding-left: 10px;
+.contenedor_input input:focus{
+    border-bottom: 2px solid #333;
 }
 
 .btn-registrar{
@@ -108,4 +109,99 @@
     border: none;
     background-color: var(--fondo-nav);
     color: #f0f0f0;
+}
+
+
+.valida{
+    border: 1px solid #0f4;
+}
+
+.sin-validar{
+    border: 1px solid #f04;
+}
+
+.mensaje-error{
+    font-size: .6rem;
+}
+
+@media only screen and (max-width: 1440px){
+    
+}
+
+@media only screen and (max-width: 1024px){
+
+}
+
+@media only screen and (max-width: 768px){
+
+    .form-registrar{
+        width: 90%;
+        height: 90%;
+    }
+    .img-forms{
+        display: none;
+    }
+
+    .contenedor_input label{
+        width: 100%;
+        height: 2.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .contenedor_input input{
+        width: 100%;
+        height:2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .btn-registrar{
+        width: 200px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .form-login{
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .mb-4{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .img-forms{
+        display: none;
+    }
+
+    .form-registrar{
+        width: 100%;
+        height: 90%;
+    }
+
+    .img-forms{
+        display: none;
+    }
+
+    .contenedor_input label{
+        width: 100%;
+        height: 1.4rem;
+        font-size: 1rem;
+    }
+    
+    .contenedor_input input{
+        width: 100%;
+        height:1.4rem;
+        font-size: 1rem;
+    }
+
+    .btn-registrar{
+        width:100px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .form-login{
+        height: 50%;
+    }
 }

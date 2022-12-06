@@ -47,7 +47,7 @@
                 {% comment %} user.is_authenticated  {% endcomment %}
                 {% if user.is_authenticated %}
                 <span class="span_login"><a href="{% url 'logout' %}">Logout</a></span>
-                <p class="bienvenido">Hola {{user.username}}, bienvenido</p>
+                <p class="bienvenido">Hola {{user.username}}, bienvenido/a</p>
                 {% else %}
                 <span class="span_login"><a href="{% url 'login' %}">Login</a></span>
                 <span class="span_login"><a href="{% url 'usuarios:registro' %}">Registrar</a></span>
@@ -67,5 +67,6 @@
         <a href="#inicio">^</a>
     </div>
     <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/validaciones.js'%}"></script>
 </body>
 </html>
