@@ -13,7 +13,7 @@
     align-items: center;
     flex-direction: column;
     margin:2rem 0;
-    background-color: var(--fondo-principal);
+    background-color: rgb(221, 221, 221);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 0 10px 1px #333;
@@ -21,7 +21,7 @@
 
 .maps h2{
     margin:0 0 2rem 0;
-    color:#444;
+    color: var(--fondo-principal);
     font-family: var(--family-verdana);
 }
 

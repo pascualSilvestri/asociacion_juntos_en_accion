@@ -9,6 +9,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(37, 37, 37);
 }
 
 .main_card_contenedor{
@@ -26,27 +27,30 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: var(--fondo-principal);
-    color:#444;
+    /* background-color: var(--fondo-principal); */
+    color:rgb(165, 165, 165);
     padding: 2rem 3rem;
     margin: 4rem 0;
     border-radius: 20px;
-    box-shadow: 0 0 10px 1px #333;
+    /* box-shadow: 0 0 10px 1px #333; */
     font-family: var(--family-verdana);
+    font-size: 1.2rem;
 }
 
 .card_info h2{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .card_info p{
-    font-size: .9rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
     text-align: justify;
 }
 
 .card_info ul>li{
-    font-size: .9rem;
-    margin-bottom: .5rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 1.6rem;
     text-align: justify;
     list-style:circle;
 }
