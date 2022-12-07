@@ -9,9 +9,10 @@
     color: #333;
     font-size: 2rem;
 }
+
 .main-registrar{
     width: 100%;
-    height: calc(100% - 12rem);
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,6 +135,11 @@
 
 @media only screen and (max-width: 768px){
 
+    .main-registrar{
+        
+        height: auto;
+    }
+
     .form-registrar{
         width: 90%;
         height: 90%;
@@ -169,6 +175,7 @@
     .mb-4{
         margin-top: 2rem;
         font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
     .img-forms{
         display: none;
@@ -176,7 +183,7 @@
 
     .form-registrar{
         width: 100%;
-        height: 90%;
+        height: auto;
     }
 
     .img-forms{
