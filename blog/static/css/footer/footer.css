@@ -1,8 +1,8 @@
 footer{
     width: 100%;
     height: 6rem;
-    background: linear-gradient(90deg, #000 25%,#444 50%,#b2c629 75%,#72c629 100%);
-    /* background-color: var(--fondo-main); */
+    /* background: linear-gradient(90deg, #000 25%,#444 50%,#b2c629 75%,#72c629 100%); */
+    background-color: var(--fondo-header);
     display: flex;
     justify-content: center;
     align-items: center;

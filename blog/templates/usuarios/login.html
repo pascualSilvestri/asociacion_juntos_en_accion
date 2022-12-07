@@ -3,10 +3,9 @@
 <main class="main-login" role="main">
   <h3 class="mb-4">Ingreso de usuario</h3>
   <div class="container">
-    <div class="container">
-        <div class="img-forms div-img-left">
-          <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
-        </div>
+    <div class="img-forms div-img-left">
+      <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
+    </div>
     <form class="form-registrar form-login" method="POST">
       {%csrf_token%} {{form.errors}}
       <div class="contenedor_input">
@@ -25,8 +24,8 @@
       <input type="submit" class="btn-registrar" name="" value="ENVIAR" />
     </form>
     <div class="img-forms">
-        <img src="{% static 'img/logoEscuela.png'%}" alt="logo" />
-      </div>
+      <img src="{% static 'img/logoEscuela.png'%}" alt="logo" />
+    </div>
   </div>
 </main>
 {% endblock %}
