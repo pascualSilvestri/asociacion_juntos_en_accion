@@ -1,7 +1,7 @@
 .main_telf{
     width: 100%;
     height: auto;
-    background-color: var(--fondo-principal);
+    background-color: var(--fondo-nav);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
 
 .telf_titulo{
     margin-bottom:1rem;
-    color: #333;
+    color:rgb(165, 165, 165);
     font-family: var(--family-verdana);
 }
 
@@ -30,7 +30,7 @@
 
 .ul_telf li a{
     text-decoration: none;
-    color:#333;
+    color:rgb(165, 165, 165);
     font-family: var(--family-verdana);
 }
 

@@ -8,6 +8,7 @@
     font-family: var(--family-verdana);
     color: #333;
     font-size: 2rem;
+    background-color: var(--fondo-principal);   
 }
 
 .main-registrar{
@@ -20,10 +21,11 @@
     font-family: var(--family-verdana);
     color: #333;
     font-size: 2rem;
+    background-color: var(--fondo-principal);
 }
 
 .main-registrar h3{
-    margin: 1rem 0;
+    margin-top: 1.5rem;
 }
 
 .container{
@@ -32,6 +34,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--fondo-main);
+    margin:1rem 0;
+    padding: 1rem;
 }
 
 .img-forms{
@@ -62,7 +67,6 @@
     padding: 1rem;
     font-family: var(--family-verdana);
     box-shadow: 0 0 10px 3px #3337;
-    margin-bottom: 2rem;
 }
 
 .contenedor_input{
