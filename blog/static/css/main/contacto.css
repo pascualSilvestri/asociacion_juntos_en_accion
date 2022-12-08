@@ -10,7 +10,8 @@
 }
 
 .card_telf{
-    width: 260px;
+    max-width: 25%;
+    min-width: 260px;
     margin: 4rem 0;
     display: flex;
     justify-content: center;
