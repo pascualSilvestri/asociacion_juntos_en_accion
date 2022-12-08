@@ -3,29 +3,41 @@
     height: auto;
     background-color: var(--fondo-nav);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0 2rem;
 }
 
 .card_telf{
-    width: 50%;
-    margin: 2rem 0;
+    width: 100%;
+    margin: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column
 }
 
+.main_iconos{
+    height: 60px;
+    margin-bottom: 2rem;
+}
+
+.main_scann{
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
 .telf_titulo{
     margin-bottom:1rem;
-    color:rgb(165, 165, 165);
+    /* color:rgb(165, 165, 165); */
+    color: var(--fondo-principal);
     font-family: var(--family-verdana);
 }
 
-
 .ul_telf li{
     margin: 1rem;
+    list-style-type: circle;
+    color: white;
 }
 
 .ul_telf li a{
