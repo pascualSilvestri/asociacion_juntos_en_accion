@@ -54,6 +54,7 @@
     .main_telf{
         flex-direction: column;
         padding: 1rem;
+        align-items: center;
     }
 
     .card_telf{
