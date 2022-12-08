@@ -3,13 +3,14 @@
     height: auto;
     background-color: var(--fondo-nav);
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: flex-start;
     padding: 0 2rem;
 }
 
 .card_telf{
-    width: 100%;
+    width: 260px;
     margin: 4rem 0;
     display: flex;
     justify-content: center;
