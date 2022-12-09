@@ -1,10 +1,30 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% block title %} Noticias{% endblock %}
+{% block contenedor %}
+<main class="main-noticias">
 
-    {% block title %} Noticias{% endblock %}
+  <section class="section-noticias-ultimas_noticias">
 
+    <div class="titulo-buscador-ultimas_noticias">
 
-    {% block contenedor %}
-    
-    
-    {% endblock  %}
-    
+      <h2>Ultimas Noticias</h2>
+
+      <div class="buscador">
+        <input type="text" />
+        <button><i></i></button>
+      </div>
+
+    </div>
+
+    <div class="contenedor-ultimas_noticias">
+
+      <div class="noticia">
+        <h3></h3>
+        <p></p>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+{% endblock %}
