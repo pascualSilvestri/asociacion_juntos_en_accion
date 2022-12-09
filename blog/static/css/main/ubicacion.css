@@ -5,7 +5,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--fondo-principal);
+    background-image: url(/static/img/fotos/foto5r.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: var(--fondo-principal); */
 }
 
 .maps{
