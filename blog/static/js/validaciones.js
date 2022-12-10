@@ -20,6 +20,7 @@ let errorE = false
 let errorU = false
 let errorP = false
 let errorPP = false
+let errorB = false
 
 const redex = {
     'nombre': /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
@@ -157,7 +158,7 @@ function divError(error, cont, clase) {
 }
 
 btn.addEventListener("click", e => {    
-    if (!errorA && !errorE && !errorM && !errorN && nombre.value != "" && email.value != "" && asunto.value != "") {
+    if (!errorA && !errorE && !errorP && !errorN && !errorPP && !errorU && nombre.value != "" && email.value != "" && usuario.value != "") {
         alert("Envio con exito");
         nombre.value = "";
         apellido.value = "";

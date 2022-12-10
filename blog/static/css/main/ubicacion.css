@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/static/img/fotos/foto5r.jpg);
+    background-image: url('/static/img/fotos/foto5r.jpg');
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
