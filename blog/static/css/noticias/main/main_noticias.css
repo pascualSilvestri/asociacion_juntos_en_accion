@@ -22,26 +22,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .titulo-buscador-ultimas_noticias h2{
     font-size: 2rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
     color: #f2f2f2;
     font-family: var(--family-verdana);
 }
 
 .buscador{
-
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buscador input{
+    width: 70%;
+    height: 3rem;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    padding-left: 1rem;
 
 }
 
 .buscador button{
+    width: 10%;
+    height: 3rem;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: .5rem;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
 
+.buscador button>img{
+    width: 70%;
+    height: 100%;
 }
 
 
@@ -52,15 +74,15 @@
     justify-content: center;
     align-items: center;
     background-color: var(--fondo-main);
+    overflow-x: hidden;
+    position: relative;
+
 }
 
 .noticia{
-    width: 70%;
+    min-width: 70%;
     height: 27rem;
-    background-image: url(/static/img/messiPaises.jpeg);
-    background-size: cover;
-    background-position: end;
-    margin: 2rem 0;
+    margin: 2rem 3rem;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -68,8 +90,71 @@
     align-items: flex-start;
     padding: 2rem;
     font-family: var(--family-verdana);
+    background-color: #e0e0e0;
+    animation: carrusel 18s infinite alternate 1s;
+}
+
+
+@keyframes carrusel {
+    0% {
+        transform: translate(0%);
+    }
+    10%{
+        transform: translate(0%);
+    }
+    20%{
+        transform: translate(100%);
+    }
+    30%{
+        transform: translate(100%);
+    }
+    40%{
+        transform: translate(0%);
+    }
+    50%{
+        transform: translate(0%)
+    }
+    60%{
+        transform: translate(-100%);
+    }
+    70%{
+        transform: translate(-100%);
+    }
+    80%{
+        transform: translate(0%);
+    }
+    90%{
+        transform: translate(0%);
+    }
+    100%{
+        transform: translate(100%)
+        translate(0%);
+    }
     
 }
+
+
+.noticia-card1{
+    background-image: url(/static/img/pruebas/73294.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.noticia-card2{
+    background-image: url(/static/img/pruebas/messis2.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.noticia-card3{
+    background-image: url(/static/img/pruebas/messi.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .descripcion{
     min-width:50%;
@@ -87,4 +172,23 @@
 
 .descripcion p{
 
+}
+
+.cambio-noticias{
+    width: 40px;
+    height: 100%;
+    background-color: #3334;
+    font-size: 2rem;
+    border: none;
+    color: #333;
+}
+
+.btn-rigth{
+    position: absolute;
+    right:3px;
+}
+
+.btn-left{
+    position: absolute;
+    left: 3px;
 }

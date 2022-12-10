@@ -1,4 +1,5 @@
 {% extends 'base.html' %} 
+{% load static %} 
 {% block title %} Noticias{% endblock %}
 {% block contenedor %}
 <main class="main-noticias">
@@ -11,22 +12,38 @@
 
       <div class="buscador">
         <input type="text" />
-        <button><i></i></button>
+        <button><img src="{% static 'img/busquedad.png' %}" alt=""></button>
       </div>
 
     </div>
 
     <div class="contenedor-ultimas_noticias">
-
-      <div class="noticia">
+        
+      <div class="noticia noticia-card1">
         <div class="descripcion">
             <h3>Seguimos con el sueño mundialista</h3>
-            <p>Argentina le gana a Paises Bajos y logra avanzar a la siguiente etapa del mundial, donde se enfrentara a croacias.</p>
+            <p>Argentina le gana a Paises Bajos y logra avanzar a la siguiente etapa del mundial, donde se enfrentara a croacia.</p>
         </div>
       </div>
 
+      <div class="noticia noticia-card2">
+        <div class="descripcion">
+            <h3>Seguimos con el sueño mundialista</h3>
+            <p>Argentina le gana a Paises Bajos y logra avanzar a la siguiente etapa del mundial, donde se enfrentara a croacia.</p>
+        </div>
+      </div>
 
+      <div class="noticia noticia-card3">
+        <div class="descripcion">
+            <h3>Seguimos con el sueño mundialista</h3>
+            <p>Argentina le gana a Paises Bajos y logra avanzar a la siguiente etapa del mundial, donde se enfrentara a croacia.</p>
+        </div>
+      </div>
+      <button class="cambio-noticias btn-left"><</button>
+      <button class="cambio-noticias btn-rigth">></button>
     </div>
+
+
 
   </section>
 </main>
