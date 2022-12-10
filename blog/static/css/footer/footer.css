@@ -13,3 +13,7 @@ footer p{
     color:rgb(165, 165, 165);
 }
 
+footer img{
+    width: 12rem;
+    height: auto;
+}
