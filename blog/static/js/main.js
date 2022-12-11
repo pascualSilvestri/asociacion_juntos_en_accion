@@ -7,6 +7,7 @@ const noticias = document.querySelector('.noticias')
 const btnArriva = document.querySelector(".up")
 const menu = document.querySelector('.contenedor_nav');
 const btnMenu = document.querySelector('.menu')
+const bienvenido = document.querySelector('.bienvenido')
 
 const title = 'Asociacion Juntos en accion |'
 const tituloNoticia = 'Asociacion Juntos en accion | Noticias'
@@ -28,12 +29,14 @@ if (title != titulo){
 
 if(tituloNoticia == titulo){
     noticias.style.display = 'none'
+    bienvenido.style.display = 'none'
 }else{
     noticias.style.display = 'flex'
 }
 
 if(tituloRecursos == titulo){
     recursos.style.display = 'none'
+    bienvenido.style.display = 'none'
 }else{
     recursos.style.display = 'flex'
 }

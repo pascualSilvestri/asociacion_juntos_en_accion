@@ -28,7 +28,7 @@ body{
     right: 50px;
     width: 70px;
     height: 70px;
-    background-color: var(--fondo-nav);
+    background-color: var(--fondo-principal);
     display: flex;
     justify-content: center;
     align-items: center;
