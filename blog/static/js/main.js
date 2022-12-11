@@ -55,3 +55,11 @@ document.addEventListener("scroll", e => {
 btnMenu.addEventListener('click', (e)=>{
     menu.classList.toggle("mostrar")
 });
+
+
+
+// Pruebas
+
+// const noticia = document.querySelector('.noticia');
+
+// noticia.style.backgroundImage = "url('/media/noticias/messiPaises.jpeg')";
