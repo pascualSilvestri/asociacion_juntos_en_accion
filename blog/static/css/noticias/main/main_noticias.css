@@ -99,7 +99,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #3339;
+    background-color: #3337;
     position: absolute;
     top: 0;
     left: 0;
@@ -178,22 +178,19 @@
     position: relative;
 }
 
-    .noticia-card1{
-        background-image: url(/static/img/pruebas/73294.jpg);
+.noticia-card1{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .noticia-card2{
-        background-image: url(/static/img/pruebas/messi.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .noticia-card3{
-        background-image: url(/static/img/pruebas/messis2.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
