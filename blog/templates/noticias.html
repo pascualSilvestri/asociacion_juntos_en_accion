@@ -15,7 +15,7 @@
     </div>
 
     <div class="contenedor-ultimas_noticias">
-      {% for i in noticia %}
+      {% for i in noticiaUlt %}
       <div
         class="noticia noticia-card1"
         style="background-image: url({% static 'img/pruebas/73294.jpg'%})"
@@ -35,4 +35,16 @@
     </div>
   </section>
 </main>
+<article class="articulo">
+  {% for i in noticia %}
+  <div class="contenedorNoticia">
+    <img src="{% static 'img/pruebas/messi.jpg' %}" alt="Imágen Noticia" class="img-noticia">
+    <div class="contenedorTexto">
+      <h3 class="tituloNoticia">{{i.titulo}}</h3>
+      <p class="resumenNoticia">{{i.cuerpo}}</p>
+      <a href="#" class="leerMas">Leer más</a>
+    </div>
+  </div>
+  {% endfor %}
+</article>
 {% endblock %}

@@ -8,7 +8,7 @@ app_name = 'noticias'
 	
 urlpatterns = [
     
-    path('', views.ultimasNoti, name = 'noticias'),
+    path('', views.ultimasNoti, name = 'ultima'),
     # path('', views.Mostrar.as_view(), name = 'noticias'),
     
 	

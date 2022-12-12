@@ -7,8 +7,10 @@ from .models import Noticia
 
 
 def ultimasNoti(request):
-    noticia = Noticia.objects.order_by('id').reverse()[:3]
-    context ={'noticia':noticia}
+    noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
+    noticia = Noticia.objects.all()
+    context ={'noticiaUlt':noticiaUlt,
+              'noticia':noticia}
     return render(request,'noticias.html',context)
 
 

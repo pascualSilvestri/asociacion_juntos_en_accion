@@ -24,6 +24,7 @@ urlpatterns = [
     
     path('',views.Home, name = 'home'),
     path("noticias/",include('apps.noticias.urls')),
+    # path("noticias/",views.Noticias,name='noticias'),
     path('Usuario/',include('apps.usuarios.urls')),
     path('recursos/', views.Recursos, name= 'recursos'),
     
