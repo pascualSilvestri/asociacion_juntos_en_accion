@@ -90,7 +90,7 @@
     font-family: var(--family-verdana);
     background-color: #e0e0e0;
     position: relative;
-    animation: carrusel 18s infinite  1s;
+    /* animation: carrusel 18s infinite  1s; */
 }
 
 .noticia::before{
@@ -218,21 +218,35 @@
 }
 
 .cambio-noticias{
-    width: 40px;
+    width: 60px;
     height: 100%;
-    background-color: #3334;
-    font-size: 2rem;
+    background-color: #3339;
+    font-size: 4rem;
     border: none;
-    color: #333;
-    display: none;
+    color: #f2f2f285;    
 }
 
 .btn-rigth{
     position: absolute;
-    right:3px;
+    right:1px;
 }
 
 .btn-left{
     position: absolute;
-    left: 3px;
+    left: 1px;
+}
+
+
+/* carrusel */
+
+.trans0{
+    transform: translateX(0%); 
+}
+
+.trans100{
+    transform: translateX(100%); 
+}
+
+.trans_100{
+    transform: translateX(-100%); 
 }
