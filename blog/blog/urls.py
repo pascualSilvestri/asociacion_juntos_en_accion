@@ -23,7 +23,7 @@ urlpatterns = [
     
     
     path('',views.Home, name = 'home'),
-    path("noticias/",views.Noticias, name="noticias"),
+    path("noticias/",include('apps.noticias.urls')),
     path('Usuario/',include('apps.usuarios.urls')),
     path('recursos/', views.Recursos, name= 'recursos'),
     
