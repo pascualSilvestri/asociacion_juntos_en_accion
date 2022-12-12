@@ -136,7 +136,13 @@ nav{
 /* Responsividad */
 
 
-@media only screen and (max-width: 768px){
+/* @media only screen and (max-width: 1024px){
+    .navigation ul li>a{
+        font-size: .6rem;
+    }
+} */
+
+@media only screen and (max-width: 1130px){
     
     .logo{
         width: 40%;
@@ -160,7 +166,7 @@ nav{
     }
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 741px){
 
     .bienvenido{
         display: none;
