@@ -221,11 +221,15 @@ nav{
     .menu img{
         width: 60%;
         height: 40%;
+        filter: invert();
     }
 
     .mostrar{
         top:6rem;
         left: 0;
+    }
+    .no-mostrar{
+        left: 100rem;
     }
     
 }

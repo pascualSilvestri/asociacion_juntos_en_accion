@@ -3,7 +3,8 @@ const titulo = document.title;
 const home = document.querySelector('.home');
 const mision = document.querySelector('.mision');
 const recursos = document.querySelector('.recursos');
-const noticias = document.querySelector('.noticias')
+const noticias = document.querySelector('.noticias');
+const contacto = document.querySelector('.contacto');
 const btnArriva = document.querySelector(".up")
 const menu = document.querySelector('.contenedor_nav');
 const btnMenu = document.querySelector('.menu')
@@ -55,10 +56,18 @@ document.addEventListener("scroll", e => {
 });
 
 
-btnMenu.addEventListener('click', (e)=>{
+btnMenu.addEventListener('click', ()=>{
     menu.classList.toggle("mostrar")
 });
 
+contacto.addEventListener('click', ()=>{
+    menu.classList.toggle("mostrar")
+});
+
+
+mision.addEventListener('click', ()=>{
+    menu.classList.toggle("mostrar")
+});
 
 
 // Pruebas
