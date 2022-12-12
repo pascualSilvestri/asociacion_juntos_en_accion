@@ -126,7 +126,7 @@ function moverCarrusel(){
             ban0 = true
             ban100 = false
         }
-    },5000)
+    },6000)
     
 }
 

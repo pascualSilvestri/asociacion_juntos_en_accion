@@ -251,3 +251,12 @@
 .trans_100{
     transform: translateX(-100%); 
 }
+
+
+@media only screen and (max-width: 741px){
+    .noticia img{
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
