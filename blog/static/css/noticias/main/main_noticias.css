@@ -117,92 +117,10 @@
 
 }
 
-/* @keyframes carrusel {
-    0% {
-        transform: translate(0%);
-    }
-    5%{
-        transform: translate(0%);
-    }
-    10%{
-        transform: translate(0%);
-    }
-    15%{
-        transform: translate(0%);
-    }
-    20%{
-        transform: translate(100%);
-    }
-    25%{
-        transform: translate(100%);
-    }
-    30%{
-        transform: translate(100%);
-    }
-    35%{
-        transform: translate(100%);
-    }
-    40%{
-        transform: translate(0%);
-    }
-    45%{
-        transform: translate(0%);
-    }   
-    50%{
-        transform: translate(0%);
-    }
-    55%{
-        transform: translate(0%);
-    }
-    60%{
-        transform: translate(0%);
-    }
-    65%{
-        transform: translate(-100%);
-    }   
-    70%{
-        transform: translate(-100%);
-    }
-    75%{
-        transform: translate(-100%);
-    }
-    80%{
-        transform: translate(-100%);
-    }
-    85%{
-        transform: translate(0%);
-    }
-    90%{
-        transform: translate(0%);
-    }
-    95%{
-        transform: translate(0%);
-    }
-    100%{
-        transform: translate(0%);
-    }
-    
-} */
-
 .noticia img{
     height: 100%;
     z-index: 2;
 }
-
-/* .noticia_card1{
-    transform: translatex(-110%);
-
-}
-
-.noticia-card2{
-    transform: translatex(0);
-
-}
-
-.noticia_card3{
-    transform: translatex(110%);
-} */
-
 
 .descripcion{
     width:auto;
@@ -250,24 +168,28 @@
 
 /* carrusel */
 
-.trans0{
-    transform: translateX(0%); 
+.act{
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: 10;
+    transition: 0.4s;
 }
 
-.trans100{
-    transform: translateX(110%); 
+.act:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 
-.trans_100{
+.right{
+    transform: translateX(110%);
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+.left{
     transform: translateX(-110%); 
-}
-
-.trans200{
-    transform: translateX(200%); 
-}
-
-.trans_200{
-    transform: translateX(- 200%); 
+    transition: 0.4s;
+    opacity: 0.8;
 }
 
 
