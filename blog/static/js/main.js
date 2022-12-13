@@ -46,10 +46,10 @@ if(tituloRecursos == titulo){
 
 document.addEventListener("scroll", e => {
     let scrolly = e.path[1].window.scrollY
-    if (scrolly >= 200) {
+    if (scrolly >= 600) {
         btnArriva.style.display = "flex"
     }
-    if (scrolly < 200) {
+    if (scrolly < 600) {
         btnArriva.style.display = "none"
     }
 
