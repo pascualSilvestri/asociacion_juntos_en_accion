@@ -156,14 +156,14 @@
 .btn-rigth{
     position: absolute;
     right:1px;
-    z-index: 100;
+    z-index: 3;
     cursor: pointer;
 }
 
 .btn-left{
     position: absolute;
     left: 1px;
-    z-index: 100;
+    z-index: 3;
     cursor: pointer;
 }
 
@@ -174,24 +174,28 @@
     transform: translateX(0%);
     opacity: 1;
     transition: 0.4s;
+    z-index: 2;
 }
 
 .act:hover{
     transform: scale(1.1);
     cursor: pointer;
     transition: 0.2s;
+    z-index: 0;
 }
 
 .right{
     transform: translateX(110%);
     transition: 0.4s;
     opacity: 0.8;
+    z-index: 0;
 }
 
 .left{
     transform: translateX(-110%); 
     transition: 0.4s;
     opacity: 0.8;
+    z-index: 1;
 }
 
 
