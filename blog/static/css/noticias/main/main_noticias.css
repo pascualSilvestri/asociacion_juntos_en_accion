@@ -73,14 +73,16 @@
 
 
 .contenedor-ultimas_noticias{
+    box-sizing: border-box;
     width: 100%;
-    height: auto;
+    height: 22rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--fondo-main);
     overflow-x: hidden;
     position: relative;
+    padding: 1rem 0;
 }
 
 .noticia{
@@ -94,8 +96,11 @@
     align-items: center;
     font-family: var(--family-verdana);
     background-color: #e0e0e0;
-    position: relative;
+    position: absolute;
     transition: 1s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     /* animation: carrusel 18s infinite  1s; */
 }
 
@@ -109,9 +114,7 @@
     top: 0;
     left: 0;
     border-radius: 20px;    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 /* @keyframes carrusel {
@@ -183,26 +186,22 @@
 
 .noticia img{
     height: 100%;
-    position: relative;
+    z-index: 2;
 }
 
-.noticia-card1{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+/* .noticia_card1{
+    transform: translatex(-110%);
+
 }
 
 .noticia-card2{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    transform: translatex(0);
+
 }
 
-.noticia-card3{
-    background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-}
+.noticia_card3{
+    transform: translatex(110%);
+} */
 
 
 .descripcion{
@@ -215,6 +214,7 @@
     position: absolute;
     bottom: 10%;
     left: 5%;
+    z-index: 10;
 }
 
 .descripcion h3{
@@ -238,11 +238,13 @@
 .btn-rigth{
     position: absolute;
     right:1px;
+    z-index: 100;
 }
 
 .btn-left{
     position: absolute;
     left: 1px;
+    z-index: 100;
 }
 
 
@@ -253,11 +255,11 @@
 }
 
 .trans100{
-    transform: translateX(100%); 
+    transform: translateX(110%); 
 }
 
 .trans_100{
-    transform: translateX(-100%); 
+    transform: translateX(-110%); 
 }
 
 .trans200{
