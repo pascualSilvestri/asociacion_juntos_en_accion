@@ -24,6 +24,12 @@ def detalle_noticia(request, pk):
     context= {'noticia':n}
     return render(request,'noticia/detalle.html',context)
 
+def filtro_categoria(request,pk):
+    n = Noticia.objects.filter( categoría_noticia = pk)
+
+    context= {'filtro':n}
+    return render(request,'noticia/filtroCat.html',context)
+
 # class Mostrar(ListView):
 #     model = Noticia
 #     template_name = 'noticias.html'

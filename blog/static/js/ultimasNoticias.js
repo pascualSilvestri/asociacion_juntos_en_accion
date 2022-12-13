@@ -1,150 +1,62 @@
 const btn_left = document.querySelector(".btn-left");
 const btn_rigth = document.querySelector(".btn-rigth");
+const noticia = document.getElementsByClassName("noticia");
 
-const noticia = document.querySelectorAll(".noticia");
 
-const tran0 = '0%'
-const tran100= '100%'
-const tran_100='-100%'
+var ban1 = true
+var ban2 = false
+var ban3 = false
 
-let ban0 = true
-let ban100 = false
-let ban_100 = false
 
-btn_left.addEventListener('click',()=>{
-    console.log(ban0)
-    console.log(ban100)
-    console.log(ban_100)
-    if(ban0){
-        noticia[0].classList.toggle('trans100')
-        noticia[1].classList.toggle('trans100')
-        noticia[2].classList.toggle('trans100')
-        noticia[0].classList.toggle('trans0')
-        noticia[1].classList.toggle('trans0')
-        noticia[2].classList.toggle('trans0')
-        ban0 = false
-        ban100=true
-        ban_100 = false
-    }else
-    if(ban100){
-        noticia[0].classList.toggle('trans_100')
-        noticia[1].classList.toggle('trans_100')
-        noticia[2].classList.toggle('trans_100')
-        noticia[0].classList.toggle('trans100')
-        noticia[1].classList.toggle('trans100')
-        noticia[2].classList.toggle('trans100')
-        ban100 = false
-        ban_100 = true
-        ban0 = false
-    }else
-    if(ban_100){
-        noticia[0].classList.toggle('trans0')
-        noticia[1].classList.toggle('trans0')
-        noticia[2].classList.toggle('trans0')
-        noticia[0].classList.toggle('trans_100')
-        noticia[1].classList.toggle('trans_100')
-        noticia[2].classList.toggle('trans_100')
-        ban_100 = false
-        ban0 = true
-        ban100 = false
-    }
+function add_remove_class(elem,arg1,arg2){
+    elem.classList.add(arg1);
+    elem.classList.remove(arg2);
+}
+
+// Configuraciones Iniciales de las posiciones de las noticias(Cuando ni bien arranca el programa)
+noticia[0].classList.add('act')
+noticia[1].classList.add('right')
+noticia[2].classList.add('left')
+
+// Cuando se presione el boton left, hacer lo siguiente:
+btn_left.addEventListener('click', (e) =>{
+    // Averiguar las imágenes que están en las posiciones act, right y left
+    const act = document.querySelector(".act");
+    const right = document.querySelector(".right");
+    const left = document.querySelector(".left");
     
+    // Hallada la posicion de las imágenes reordenarlas en el sentido del botón pulsado
+    add_remove_class(act, 'left', 'act');
+    add_remove_class(right, 'act', 'right');
+    add_remove_class(left, 'right', 'left');
 })
 
-btn_rigth.addEventListener('click',()=>{
-    console.log(ban0)
-    console.log(ban100)
-    console.log(ban_100)
-    if(ban0){
-        noticia[0].classList.toggle('trans0')
-        noticia[1].classList.toggle('trans0')
-        noticia[2].classList.toggle('trans0')
-        noticia[0].classList.toggle('trans_100')
-        noticia[1].classList.toggle('trans_100')
-        noticia[2].classList.toggle('trans_100')
-        ban0 = false
-        ban100=false
-        ban_100 = true
-    }else
-    if(ban_100){
-        noticia[0].classList.toggle('trans_100')
-        noticia[1].classList.toggle('trans_100')
-        noticia[2].classList.toggle('trans_100')
-        noticia[0].classList.toggle('trans100')
-        noticia[1].classList.toggle('trans100')
-        noticia[2].classList.toggle('trans100')
-        ban100 = true
-        ban_100 = false
-        ban0 = false
-    }else
-    if(ban100){
-        noticia[0].classList.toggle('trans0')
-        noticia[1].classList.toggle('trans0')
-        noticia[2].classList.toggle('trans0')
-        noticia[0].classList.toggle('trans100')
-        noticia[1].classList.toggle('trans100')
-        noticia[2].classList.toggle('trans100') 
-        ban_100 = false
-        ban0 = true
-        ban100 = false
-    }
+
+btn_rigth.addEventListener('click', (e) =>{
+    const act = document.querySelector(".act");
+    const right = document.querySelector(".right");
+    const left = document.querySelector(".left");
     
+    add_remove_class(act, 'right', 'act');
+    add_remove_class(right, 'left', 'right');
+    add_remove_class(left, 'act', 'left');
 })
+
 
 function moverCarrusel(){
-    let intervalo = setInterval(()=>{
-        if(ban0){
-            noticia[0].classList.toggle('trans100')
-            noticia[1].classList.toggle('trans100')
-            noticia[2].classList.toggle('trans100')
-            noticia[0].classList.toggle('trans0')
-            noticia[1].classList.toggle('trans0')
-            noticia[2].classList.toggle('trans0')
-            ban0 = false
-            ban100=true
-            ban_100 = false
-        }else
-        if(ban100){
-            noticia[0].classList.toggle('trans_100')
-            noticia[1].classList.toggle('trans_100')
-            noticia[2].classList.toggle('trans_100')
-            noticia[0].classList.toggle('trans100')
-            noticia[1].classList.toggle('trans100')
-            noticia[2].classList.toggle('trans100')
-            ban100 = false
-            ban_100 = true
-            ban0 = false
-        }else
-        if(ban_100){
-            noticia[0].classList.toggle('trans0')
-            noticia[1].classList.toggle('trans0')
-            noticia[2].classList.toggle('trans0')
-            noticia[0].classList.toggle('trans_100')
-            noticia[1].classList.toggle('trans_100')
-            noticia[2].classList.toggle('trans_100')
-            ban_100 = false
-            ban0 = true
-            ban100 = false
-        }
-    },6000)
+    setInterval((e)=>{
+        const act = document.querySelector(".act");
+        const right = document.querySelector(".right");
+        const left = document.querySelector(".left");
+        
+        add_remove_class(act, 'left', 'act');
+        add_remove_class(right, 'act', 'right');
+        add_remove_class(left, 'right', 'left');
+    },6000);
     
 }
 
 moverCarrusel();
-
-
-
-
-
-
-
-
-// function translado(transladar,arr){
-//     for (let i = 0; i <= arr.length; i++){
-//         arr[i].style.translate = transladar
-//         console.log(arr[i].style.translate)
-//     }
-// }
 
 
 

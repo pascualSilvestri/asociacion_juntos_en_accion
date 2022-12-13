@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Noticias{% endblock %} 
+{% block contenedor %}
+
+
+{% for noti in filtro %}
+<h2>MI NOTICIA Categoria</h2>
+    <img src="{{noti.imagen.url}}">
+
+    <p>TITULO: {{noti.titulo}}</p>
+    <p>FECHA: {{noti.fecha}}</p>
+    <p>CATEGORIA: {{noti.categoría_noticia}}</p>
+    <p>CUERPO: {{noti.cuerpo}}</p>
+    <br><br>
+{% endfor %}
+
+{% endblock %}

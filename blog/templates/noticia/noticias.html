@@ -11,30 +11,31 @@
         Filtrar
         <select name="buscador" id="buscar-categoria">
           {% for c in categoria%}
-          <option value="{{c.nombre}}">{{c.nombre}}</option>
+          <option value="{{c.nombre}}"><a href="{%  url 'noticias:filtro' c.id  %}">{{c.nombre}}</a></option>
           {% endfor %}
         </select>
       </div>
     </div>
 
     <div class="contenedor-ultimas_noticias">
-      {% for i in noticiaUlt %}
-      <div class="noticia noticia-card1"style="background-image: url({{i.imagen.url}})">
-        <img src="{{i.imagen.url}}" alt="" />
+      {% for noti in noticiaUlt %}
+      <div class="noticia" style="background-image: url({{noti.imagen.url}})">
+        <img src="{{noti.imagen.url}}" alt="" />
         <div class="descripcion">
-          <h3>{{i.titulo}}</h3>
+          <h3>{{noti.titulo}}</h3>
           <p>
-            {{i.cuerpo}}
+            {{noti.cuerpo}}
           </p>
         </div>
       </div>
-
       {% endfor %}
+
       <button class="cambio-noticias btn-left"><</button>
       <button class="cambio-noticias btn-rigth">></button>
     </div>
   </section>
 </main>
+
 <article class="articulo">
   {% for i in noticia %}
   <div class="contenedorNoticia">
