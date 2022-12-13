@@ -157,12 +157,14 @@
     position: absolute;
     right:1px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .btn-left{
     position: absolute;
     left: 1px;
     z-index: 100;
+    cursor: pointer;
 }
 
 
@@ -177,6 +179,7 @@
 
 .act:hover{
     transform: scale(1.1);
+    cursor: pointer;
     transition: 0.4s;
 }
 
