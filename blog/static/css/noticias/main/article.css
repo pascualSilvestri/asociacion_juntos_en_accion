@@ -83,12 +83,10 @@
     color: rgb(233, 233, 233);
 }
 
-/* @media only screen and (max-width: 768px){
+@media only screen and (max-width: 512px){
     
-    .contenedorTexto{
-        height: auto;
+    .contenedorNoticia{
+        min-width: 300px;
     }
-    .texto-articulo{
-        height: auto;
-    }
-} */
+    
+}

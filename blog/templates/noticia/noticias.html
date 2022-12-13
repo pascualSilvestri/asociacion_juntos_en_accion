@@ -2,25 +2,25 @@
 {% load static %} 
 {% block title %} Noticias{% endblock %} 
 {% block contenedor %}
-
 <main class="main-noticias">
   <section class="section-noticias-ultimas_noticias">
     <div class="titulo-buscador-ultimas_noticias">
       <h2>Ultimas Noticias</h2>
 
       <div class="buscador">
-        <input type="text" placeholder="Busqueda por categoria y noticia" />
-        <button><img src="{% static 'img/busquedad.png' %}" alt="" /></button>
+        Filtrar
+        <select name="buscador" id="buscar-categoria">
+          {% for c in categoria%}
+          <option value="{{c.nombre}}">{{c.nombre}}</option>
+          {% endfor %}
+        </select>
       </div>
     </div>
 
     <div class="contenedor-ultimas_noticias">
       {% for i in noticiaUlt %}
-      <div
-        class="noticia noticia-card1"
-        style="background-image: url({% static 'img/pruebas/73294.jpg'%})"
-      >
-        <img src="{% static 'img/pruebas/73294.jpg' %}" alt="" />
+      <div class="noticia noticia-card1"style="background-image: url({{i.imagen.url}})">
+        <img src="{{i.imagen.url}}" alt="" />
         <div class="descripcion">
           <h3>{{i.titulo}}</h3>
           <p>
@@ -38,17 +38,19 @@
 <article class="articulo">
   {% for i in noticia %}
   <div class="contenedorNoticia">
-    <img src="{% static 'img/pruebas/messi.jpg' %}" alt="Imágen Noticia" class="img-noticia">
+    <img src="{{i.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
     <div class="contenedorTexto">
       <div class="texto-articulo">
         <h3 class="tituloNoticia">{{i.titulo}}</h3>
         <p class="resumenNoticia">{{i.cuerpo}}</p>
       </div>
       <div class="btn-articulo">
-        <a href="#" class="leerMas">Leer más</a>
+        <a href="{% url 'noticias:detalle' i.id %}" class="leerMas">Leer más</a>
       </div>
     </div>
   </div>
   {% endfor %}
+  {% block noticia %}
+  {% endblock %}
 </article>
 {% endblock %}

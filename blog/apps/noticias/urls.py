@@ -10,6 +10,6 @@ urlpatterns = [
     
     path('', views.ultimasNoti, name = 'ultima'),
     # path('', views.Mostrar.as_view(), name = 'noticias'),
-    
+    path('Detalles/<int:pk>', views.detalle_noticia, name = 'detalle'),
 	
 ]
