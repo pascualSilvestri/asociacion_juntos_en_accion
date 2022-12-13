@@ -11,7 +11,7 @@
         Filtrar
         <select name="buscador" id="buscar-categoria">
           {% for c in categoria%}
-          <option value="{{c.nombre}}">{{c.nombre}}</option>
+          <option value="{{c.nombre}}"><a href="{%  url 'noticias:filtro' c.id  %}">{{c.nombre}}</a></option>
           {% endfor %}
         </select>
       </div>
