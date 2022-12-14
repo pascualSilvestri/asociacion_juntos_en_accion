@@ -46,8 +46,10 @@ if(tituloRecursos == titulo){
 }
 // fin del bloque 
 dropdown.addEventListener('click',()=>{
-    dropdown_content.classList.add('activar_select')
+    dropdown_content.classList.toggle('activar_select')
 });
+
+
 
 document.addEventListener("scroll", e => {
     let scrolly = e.path[1].window.scrollY
