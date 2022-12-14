@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.views.generic import CreateView, DetailView, ListView
 from django.contrib.auth.decorators import login_required
 # Create your views here.
-from .models import Noticia
-from .models import Categoria
+from .models import Noticia, Categoria, Comentario
+
 
 @login_required
 def ultimasNoti(request):
@@ -20,8 +20,9 @@ def ultimasNoti(request):
 @login_required
 def detalle_noticia(request, pk):
     n = Noticia.objects.get(pk = pk)
-
-    context= {'noticia':n}
+    c = Comentario.objects.all().filter(noticia = n.pk)
+    context= {'noticia':n,
+              'comentario':c}
     return render(request,'noticia/detalle.html',context)
 
 def filtro_categoria(request,pk):
