@@ -12,4 +12,9 @@
     <p>CUERPO: {{noticia.cuerpo}}</p>
     <br><br>
 
+    {% for c in comentario %}
+    <div>{{c.usuario}}</div>
+    <div>{{c.comentario}}</div>
+    <div>{{c.fecha}}</div>
+    {% endfor %}
 {% endblock %}

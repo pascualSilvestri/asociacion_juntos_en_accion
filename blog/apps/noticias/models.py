@@ -1,9 +1,7 @@
 from django.db import models
 from django.conf import settings
-
-
-
-
+from django.db.models.signals import pre_save, post_save
+from django.utils.text import slugify
 
 class Categoria(models.Model):
     
@@ -28,9 +26,11 @@ class Comentario(models.Model):
     
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     noticia = models.ForeignKey(Noticia, on_delete = models.CASCADE)
-    slug = models.SlugField()
     comentario = models.TextField(max_length=200, blank=True,null=True)
     fecha = models.DateTimeField(auto_now_add = True)
     
-    def __unicode__(self):
-        return self.slug
+    def __str__(self):
+        return self.usuario 
+
+
+
