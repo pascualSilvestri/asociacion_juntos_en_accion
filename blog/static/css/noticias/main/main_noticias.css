@@ -17,17 +17,17 @@
 }
 
 .titulo-buscador-ultimas_noticias{
+    box-sizing: border-box;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
 }
 
 .titulo-buscador-ultimas_noticias h2{
-    font-size: 2rem;
-    margin-left: 3rem;
+    font-size: 1.6rem;
     color: #f2f2f2;
     font-family: var(--family-verdana);
 }
@@ -36,17 +36,17 @@
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     font-family: var(--family-verdana);
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color:#f2f2f2;
 }
 
 .buscador #buscar-categoria{
     width: 50%;
-    height: 3rem;
+    height: 2rem;
     border: none;
     background-color: #f2f2f2;
     border-radius: 15px 0 0 0px;
@@ -123,15 +123,19 @@
 }
 
 .descripcion{
-    width:auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    width: auto;
     height: auto;
     padding: .5rem 1rem;
-    background-color: #3339;
-    border-radius: 20px;
+    background-color: rgba(20, 20, 20, 0.753);
+    backdrop-filter: blur(1px);
+
+    border-radius: 10px;
     color: #f2f2f2;
     position: absolute;
-    bottom: 10%;
-    left: 5%;
+    bottom: 0;
+    left: 0;
     z-index: 10;
 }
 
@@ -141,32 +145,41 @@
 }
 
 .descripcion p{
-    font-size: .5rem;
+    font-size: .6rem;
 }
 
 .cambio-noticias{
     width: 60px;
-    height: 100%;
-    background-color: #3339;
-    font-size: 4rem;
+    height: 30%;
+    font-size: 2rem;
+    background: none;
     border: none;
-    color: #f2f2f285;    
+    color: #ffffff;
 }
 
 .btn-rigth{
+    background-color: #3339;
     position: absolute;
     right:1px;
     z-index: 3;
     cursor: pointer;
 }
 
+.btn-rigth:hover{
+    background-color: rgb(31, 31, 31);
+}
+
 .btn-left{
+    background-color: #3339;
     position: absolute;
     left: 1px;
     z-index: 3;
     cursor: pointer;
 }
 
+.btn-left:hover{
+    background-color: rgb(31, 31, 31);
+}
 
 /* carrusel */
 
