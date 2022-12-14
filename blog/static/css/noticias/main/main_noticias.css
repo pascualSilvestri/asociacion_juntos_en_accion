@@ -226,7 +226,7 @@
     background-color: #f2f2f2;
     border-radius: 10px 10px 10px 10px;
   }
-  .dropdown:hover .dropdown-content {
+  .activar_select {
     display: block;
     border: 2px solid var(--fondo-main);
   }

@@ -9,6 +9,9 @@ const btnArriva = document.querySelector(".up")
 const menu = document.querySelector('.contenedor_nav');
 const btnMenu = document.querySelector('.menu')
 const bienvenido = document.querySelector('.bienvenido')
+const dropdown_content = document.querySelector('.dropdown-content')
+const dropdown = document.querySelector('.dropdown')
+
 
 const title = 'Asociacion Juntos en accion |'
 const tituloNoticia = 'Asociacion Juntos en accion | Noticias'
@@ -42,7 +45,9 @@ if(tituloRecursos == titulo){
     recursos.style.display = 'flex'
 }
 // fin del bloque 
-
+dropdown.addEventListener('click',()=>{
+    dropdown_content.classList.add('activar_select')
+});
 
 document.addEventListener("scroll", e => {
     let scrolly = e.path[1].window.scrollY
