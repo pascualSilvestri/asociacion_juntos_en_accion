@@ -206,3 +206,39 @@
         border-radius: 10px;
     }
 }
+
+/* Filtro */
+.dropdown {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    width: 20%;
+    height: 2rem;
+    background-color: #f2f2f2;
+    margin-left: 2rem;
+    border-radius: 10px;
+}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    background-color: #f2f2f2;
+    border-radius: 10px 10px 0 0;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border: 2px solid var(--fondo-main);
+  }
+  .dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+  }

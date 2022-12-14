@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Noticias{% endblock %} 
+{% block contenedor %}
+<main class="main-noticias">
+  <section class="section-noticias-ultimas_noticias">
+    <div class="titulo-buscador-ultimas_noticias">
+      <h2>Ultimas Noticias</h2>
+
+        <div class="buscador">
+            Filtrar
+            <div class="dropdown">
+                <div class="dropdown-content">
+                {% for c in categoria%}
+                <a href="{%  url 'noticias:filtro' c.id  %}">{{ c.nombre }}</a>
+                {% endfor %}
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="contenedor-ultimas_noticias">
+      {% for noti in noticiaUlt %}
+      <div class="noticia" style="background-image: url({{noti.imagen.url}})">
+        <img src="{{noti.imagen.url}}" alt="" />
+        <div class="descripcion">
+          <h3>{{noti.titulo}}</h3>
+          <p>
+            {{noti.cuerpo}}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+
+      <button class="cambio-noticias btn-left"><</button>
+      <button class="cambio-noticias btn-rigth">></button>
+    </div>
+  </section>
+</main>
+{% block noticia %}
+{% endblock %}
+{% endblock %}
+
