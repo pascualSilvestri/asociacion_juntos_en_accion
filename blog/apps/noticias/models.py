@@ -11,7 +11,8 @@ class Comentario(models.Model):
     
     def __unicode__(self):
         return self.slug
-    
+
+
 
 class Categoria(models.Model):
     
@@ -24,7 +25,6 @@ class Noticia(models.Model):
     
     titulo = models.CharField(max_length = 150)
     cuerpo = models.TextField()
-    resumen = models.TextField()
     imagen = models.ImageField(upload_to = 'noticias')
     categoría_noticia = models.ForeignKey(Categoria, on_delete = models.CASCADE)
     fecha = models.DateTimeField(auto_now_add = True)
