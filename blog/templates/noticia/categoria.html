@@ -4,20 +4,19 @@
 
 {% block noticia %}
 <article class="articulo">
-    {% for i in noticia %}
+    {% for noti in filtro %}
     <div class="contenedorNoticia">
-      <img src="{{i.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
+      <img src="{{noti.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
       <div class="contenedorTexto">
         <div class="texto-articulo">
-          <h3 class="tituloNoticia">{{i.titulo}}</h3>
-          <p class="resumenNoticia">{{i.cuerpo}}</p>
+          <h3 class="tituloNoticia">{{noti.titulo}}</h3>
+          <p class="resumenNoticia">{{noti.cuerpo}}</p>
         </div>
         <div class="btn-articulo">
-          <a href="{% url 'noticias:detalle' i.id %}" class="leerMas">Leer más</a>
+          <a href="{% url 'noticias:detalle' noti.id %}" class="leerMas">Leer más</a>
         </div>
       </div>
     </div>
     {% endfor %}
   </article>
 {% endblock %}
-

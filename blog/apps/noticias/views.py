@@ -26,9 +26,14 @@ def detalle_noticia(request, pk):
 
 def filtro_categoria(request,pk):
     n = Noticia.objects.filter( categoría_noticia = pk)
-
-    context= {'filtro':n}
-    return render(request,'noticia/filtroCat.html',context)
+    noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
+    noticia = Noticia.objects.all()
+    categoria = Categoria.objects.all()
+    context= {'filtro':n,
+              'noticiaUlt':noticiaUlt,
+              'noticia':noticia,
+              'categoria':categoria}
+    return render(request,'noticia/categoria.html',context)
 
 # class Mostrar(ListView):
 #     model = Noticia
