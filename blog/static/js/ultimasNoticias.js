@@ -1,14 +1,15 @@
 const btn_left = document.querySelector(".btn-left");
 const btn_rigth = document.querySelector(".btn-rigth");
 const noticia = document.getElementsByClassName("noticia");
+const articulo = document.getElementsByClassName("contenedor-ultimas_noticias");
 
-
+let id;
 var ban1 = true
 var ban2 = false
 var ban3 = false
 
 
-function add_remove_class(elem,arg1,arg2){
+const add_remove_class = (elem,arg1,arg2) => {
     elem.classList.add(arg1);
     elem.classList.remove(arg2);
 }
@@ -43,8 +44,16 @@ btn_rigth.addEventListener('click', (e) =>{
 })
 
 
-function moverCarrusel(){
-    setInterval((e)=>{
+articulo[0].addEventListener('mouseover', (e) =>{
+    clearInterval(id);
+})
+
+articulo[0].addEventListener('mouseout', (e) =>{
+    moverCarrusel();
+})
+
+const moverCarrusel = () => {
+    id = setInterval((e)=>{
         const act = document.querySelector(".act");
         const right = document.querySelector(".right");
         const left = document.querySelector(".left");
@@ -57,10 +66,3 @@ function moverCarrusel(){
 }
 
 moverCarrusel();
-
-
-
-
-
-
-
