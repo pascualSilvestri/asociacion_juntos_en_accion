@@ -97,7 +97,7 @@
     font-family: var(--family-verdana);
     background-color: #e0e0e0;
     position: absolute;
-    transition: 1s;
+    /* transition: 1s; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
