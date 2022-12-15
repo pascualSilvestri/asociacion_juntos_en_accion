@@ -41,9 +41,11 @@
                     <li class="noticias">
                         <a  href="{% url 'noticias:ultima' %}">Noticias</a>
                     </li>
-                    <li>
+                    {% if user.is_superuser %}
+                    <li class="admin">
                         <a href="{% url 'admin:index' %}">Admin</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="login">
