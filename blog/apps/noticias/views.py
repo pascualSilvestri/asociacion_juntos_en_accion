@@ -9,7 +9,6 @@ from django.urls import reverse_lazy
 from apps.usuarios.models import Usuario
 
 
-@login_required
 def ultimasNoti(request):
     noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
     noticia = Noticia.objects.all()
@@ -20,7 +19,6 @@ def ultimasNoti(request):
     return render(request,'noticia/noticias.html',context)
 
 
-@login_required
 def detalle_noticia(request, pk):
     n = Noticia.objects.get(pk = pk)
     c = Comentario.objects.all().filter(noticia = n.pk)
@@ -40,6 +38,7 @@ def filtro_categoria(request,pk):
     return render(request,'noticia/categoria.html',context)
 
 
+@login_required
 def comentario_add(request):
     com = request.POST.get('comentario',None)
     usu = request.user
