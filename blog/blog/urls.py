@@ -29,7 +29,6 @@ urlpatterns = [
     path("noticias/",include('apps.noticias.urls')),
     # path("noticias/",views.Noticias,name='noticias'),
     path('Usuario/',include('apps.usuarios.urls')),
-    path('recursos/', views.Recursos, name= 'recursos'),
     
     
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
