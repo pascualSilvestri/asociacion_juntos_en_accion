@@ -19,13 +19,15 @@
         </div>
     </section>
     <section class="add-comentarios">
-        <form class="add-comentarios-form" action="" metho="post">
+        <form class="add-comentarios-form" action="{% url 'noticias:comentario'%}" method="POST">
+            {% csrf_token %}
             <h4>Comenta aquí..</h4>
-            <textarea name="comentario" id="" cols="30" rows="10" max-length="1500"></textarea>
+            <textarea name="comentario" cols="30" rows="10" max-length="1500"></textarea>
+            <div class="btn-detalle">
+                <button type="submit" value="Comentar">Comentar</button>
+            </div>
         </form>
-        <div class="btn-detalle">
-            <button type="submit">Comentar</button>
-        </div>
+        
     </section>
     <section class="get-comentarios">
         {% for c in comentario %}

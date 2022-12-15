@@ -121,7 +121,7 @@
 }
 
 .btn-detalle{
-    width: 50%;
+    width: 100%;
     height: auto;
     padding: 0 1.5rem;
     display: flex;
@@ -141,7 +141,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--fondo-header);
+    background-color: var(--fondo-principal);
     color: #f2f2f2;
     font-weight: bold;
 }
@@ -193,6 +193,9 @@
     padding: .4rem;
     border-radius: 10px;
     background-color: var(--fondo-principal);
+    color:var(--fondo-nav);
+    font-weight: 700;
+    font-size: .9rem;
 }
 
 

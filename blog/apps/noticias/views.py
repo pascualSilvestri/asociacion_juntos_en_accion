@@ -1,5 +1,5 @@
 from datetime import timezone
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views.generic import CreateView, DetailView, ListView
 from django.contrib.auth.decorators import login_required
 # Create your views here.
@@ -46,14 +46,6 @@ def comentario_add(request):
     noticia = Noticia.objects.get(pk = noti) #BUSCO LA NOTICIA CON ESA PK
     coment = Comentario.objects.create(usuario = usu, noticia = noticia, texto = com)
 
-    return redirect(reverse_lazy('noticias:detalle', kwargs={'pk':noti}))
+    return redirect(reverse_lazy('noticias/detalle.html', kwargs={'pk':noti}))
     
 
-# class Mostrar(ListView):
-#     model = Noticia
-#     template_name = 'noticias.html'
-    
-#     def get_contador(self,**kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['now'] = timezone.now()
-#         return context
