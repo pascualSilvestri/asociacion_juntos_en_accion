@@ -26,6 +26,7 @@ console.log(tituloNoticia)
 if (title != titulo){
     home.style.display = 'flex'
     mision.style.display = 'none'
+    bienvenido.style.display = 'none'
 }else{
     home.style.display = 'none'
     mision.style.display = 'flex'
@@ -33,17 +34,12 @@ if (title != titulo){
 
 if(tituloNoticia == titulo){
     noticias.style.display = 'none'
-    bienvenido.style.display = 'none'
+    
 }else{
     noticias.style.display = 'flex'
 }
 
-if(tituloRecursos == titulo){
-    recursos.style.display = 'none'
-    bienvenido.style.display = 'none'
-}else{
-    recursos.style.display = 'flex'
-}
+
 // fin del bloque 
 dropdown.addEventListener('click',()=>{
     dropdown_content.classList.toggle('activar_select')

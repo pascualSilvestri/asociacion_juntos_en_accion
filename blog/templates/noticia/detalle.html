@@ -1,20 +1,48 @@
 {% extends 'base.html' %} 
 {% load static %} 
-{% block title %} Noticias{% endblock %} 
+{% block title %} Noticia {{noticia.titulo}}{% endblock %} 
 {% block contenedor %}
+<main class="detalle">
+    <section class="content-detalle-noticia">
+        <div class="titulo-detalle-noticia">
+            <h2>{{noticia.titulo}}</h2>
+        </div>
+        <div class="img-detalle-noticia">
+            <img src="{{noticia.imagen.url}}">
+        </div>
+        <div class="fecha-categoria-detalle-noticia">
+            <p>FECHA: {{noticia.fecha}}</p>
+            <p>CATEGORIA: {{noticia.categoría_noticia}}</p>
+        </div>
+        <div class="cuerpo-detalle-noticia">
+            <p>{{noticia.cuerpo}}</p>
+        </div>
+    </section>
+    <section class="add-comentarios">
+        <form class="add-comentarios-form" action="" metho="post">
+            <h4>Comenta aquí..</h4>
+            <textarea name="comentario" id="" cols="30" rows="10" max-length="1500"></textarea>
+        </form>
+        <div class="btn-detalle">
+            <button type="submit">Comentar</button>
+        </div>
+    </section>
+    <section class="get-comentarios">
+        {% for c in comentario %}
+        <div class="card-content-comentario">
+            <div class="card-usuario">
+                <h4>{{c.usuario}}</h4>
+            </div>
+            <div class="card-comentario">
+                <p>{{c.comentario}}</p>
+            </div>
+            <div class="card-fecha">
+                <p>{{c.fecha}}</p>
+            </div>
 
-<h2>MI NOTICIA DETALLADA</h2>
-    <img src="{{noticia.imagen.url}}">
+        </div>
+        {% endfor %}
+    </section>    
+</main>
 
-    <p>TITULO: {{noticia.titulo}}</p>
-    <p>FECHA: {{noticia.fecha}}</p>
-    <p>CATEGORIA: {{noticia.categoría_noticia}}</p>
-    <p>CUERPO: {{noticia.cuerpo}}</p>
-    <br><br>
-
-    {% for c in comentario %}
-    <div>{{c.usuario}}</div>
-    <div>{{c.comentario}}</div>
-    <div>{{c.fecha}}</div>
-    {% endfor %}
 {% endblock %}

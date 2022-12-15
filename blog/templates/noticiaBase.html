@@ -11,8 +11,9 @@
             Filtrar
             <div class="dropdown">
                 <div class="dropdown-content">
+                  <a href="{% url 'noticias:ultima' %}">Mostrar todas</a>
                 {% for c in categoria%}
-                <a href="{%  url 'noticias:filtro' c.id  %}">{{ c.nombre }}</a>
+                  <a href="{%  url 'noticias:filtro' c.id  %}">{{ c.nombre }}</a>
                 {% endfor %}
                 </div>
             </div>

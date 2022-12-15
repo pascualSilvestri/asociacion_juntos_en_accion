@@ -1,0 +1,207 @@
+.detalle{
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo-header);
+    padding: 0 7rem;
+}
+.content-detalle-noticia{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fondo-principal);
+}
+
+.titulo-detalle-noticia{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fondo-principal);
+    background-color: var(--fondo-header);
+    margin-top: 1rem;
+}
+
+.titulo-detalle-noticia h2{
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    font-family: var(--family-verdana);
+}
+
+.img-detalle-noticia{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo-principal);
+    padding: 1rem 0;
+}
+
+.img-detalle-noticia img{
+    height: 100%;
+}
+
+.fecha-categoria-detalle-noticia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    background-color: var(--fondo-principal);
+    padding: 0 1rem;
+}
+
+.fecha-categoria-detalle-noticia p{
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    font-family: var(--family-verdana);
+    background-color: var(--fondo-header);
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.cuerpo-detalle-noticia{
+    width: 100%;
+    height: auto;
+    padding: 3rem 1rem;
+    background-color: var(--fondo-header);
+}
+
+.cuerpo-detalle-noticia p{
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    font-family: var(--family-verdana);
+}
+
+
+.add-comentarios{
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+    background-color: var(--fondo-principal);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.add-comentarios-form{
+    background-color: var(--fondo-header);
+    width: 50%;
+    height: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+    align-items: flex-start;
+
+}
+
+.add-comentarios-form h4{
+    font-size: 1.5rem;
+    margin: 1rem 0 ;
+    color:#f2f2f2;
+}
+
+.add-comentarios-form textarea{
+    border-radius: 30px;
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    padding: 1rem;
+    font-family: var(--family-verdana);
+    margin-bottom: 2rem;
+    resize: none;
+
+}
+
+.btn-detalle{
+    width: 50%;
+    height: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+    align-items: flex-end;
+}
+
+.btn-detalle button{
+    border-radius: 30px;
+    width: 200px;
+    height: 20px;
+    outline: none;
+    padding: 1rem;
+    font-family: var(--family-verdana);
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-comentarios{
+    width: 100%;
+    height: auto;
+    background-color: var(--fondo-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-content-comentario{
+    background-color: var(--fondo-header);
+    color: #f2f2f2;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+}
+
+.card-usuario{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card-usuario h4{
+    font-size: 1.1rem;
+    font-family: var(--family-verdana);
+    padding: .4rem;
+    border-radius: 10px;
+
+}
+
+.card-comentario{
+    width: 100%;
+    height: auto;
+    margin:1rem 0 ;
+}
+
+.card-comentario p{
+    font-family: var(--family-verdana);
+    padding: .4rem;
+    border-radius: 10px;
+    background-color: var(--fondo-principal);
+}
+
+
+.card-fecha{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.card-fecha p{
+    font-family: var(--family-verdana);
+    
+}

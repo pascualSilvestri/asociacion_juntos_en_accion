@@ -12,5 +12,6 @@ urlpatterns = [
     # path('', views.Mostrar.as_view(), name = 'noticias'),
     path('Detalles/<int:pk>', views.detalle_noticia, name = 'detalle'),
     path('Categoria/<int:pk>', views.filtro_categoria, name = 'filtro'),
+    path('Comentario/',views.comentario_add, name= 'comentario')
 	
 ]

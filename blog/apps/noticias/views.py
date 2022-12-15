@@ -4,6 +4,9 @@ from django.views.generic import CreateView, DetailView, ListView
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .models import Noticia, Categoria, Comentario
+from django.urls import reverse_lazy
+
+from apps.usuarios.models import Usuario
 
 
 @login_required
@@ -35,6 +38,17 @@ def filtro_categoria(request,pk):
               'noticia':noticia,
               'categoria':categoria}
     return render(request,'noticia/categoria.html',context)
+
+
+def comentario_add(request):
+    com = request.POST.get('comentario',None)
+    usu = request.user
+    noti = request.POST.get('id_noticia', None)# OBTENGO LA PK
+    noticia = Noticia.objects.get(pk = noti) #BUSCO LA NOTICIA CON ESA PK
+    coment = Comentario.objects.create(usuario = usu, noticia = noticia, texto = com)
+
+    return redirect(reverse_lazy('noticias:detalle', kwargs={'pk':noti}))
+    
 
 # class Mostrar(ListView):
 #     model = Noticia

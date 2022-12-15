@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/footer/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/noticias/main/main_noticias.css' %}">
     <link rel="stylesheet" href="{% static 'css/noticias/main/article.css' %}">
+    <link rel="stylesheet" href="{% static 'css/noticias/main/detalle.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Asociacion Juntos en accion |{% block title %}{% endblock %}</title>
@@ -29,7 +30,7 @@
             <div class="navigation">
                 <ul>
                     <li class="home">
-                        <a  href="{% url 'home'%}">inicio</a>
+                        <a  href="{% url 'home'%}">Inicio</a>
                     </li>
                     <li class="mision">
                         <a  href="#mision">Misión</a>
