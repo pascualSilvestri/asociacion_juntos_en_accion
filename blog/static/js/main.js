@@ -42,7 +42,10 @@ if(tituloNoticia == titulo){
 
 // fin del bloque 
 dropdown.addEventListener('click',()=>{
+    const img = document.querySelector('.img-drop');
+    dropdown.classList.toggle("dropdown-active")
     dropdown_content.classList.toggle('activar_select')
+    img.classList.toggle('img-none')
 });
 
 

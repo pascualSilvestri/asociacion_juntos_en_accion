@@ -28,13 +28,23 @@ def detalle_noticia(request, pk):
 
 def filtro_categoria(request,pk):
     n = Noticia.objects.filter( categoría_noticia = pk)
+    print(n.__len__)
+    ban = False
+    cont = 0
+    for i in n:
+        cont +=1
+    if cont == 0:
+        ban = False
+    else:
+        ban = True
     noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
     noticia = Noticia.objects.all()
     categoria = Categoria.objects.all()
     context= {'filtro':n,
               'noticiaUlt':noticiaUlt,
               'noticia':noticia,
-              'categoria':categoria}
+              'categoria':categoria,
+              'ban':ban}
     return render(request,'noticia/categoria.html',context)
 
 

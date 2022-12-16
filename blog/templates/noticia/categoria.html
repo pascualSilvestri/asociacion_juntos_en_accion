@@ -3,20 +3,27 @@
 {% block title %} Noticias{% endblock %} 
 
 {% block noticia %}
+
+
+{% if ban %}
 <article class="articulo">
-    {% for noti in filtro %}
-    <div class="contenedorNoticia">
-      <img src="{{noti.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
-      <div class="contenedorTexto">
-        <div class="texto-articulo">
-          <h3 class="tituloNoticia">{{noti.titulo}}</h3>
-          <p class="resumenNoticia">{{noti.resumen}}</p>
-        </div>
-        <div class="btn-articulo">
-          <a href="{% url 'noticias:detalle' noti.id %}" class="leerMas">Leer más</a>
-        </div>
+  {% for noti in filtro %}
+  <div class="contenedorNoticia">
+    <img src="{{noti.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
+    <div class="contenedorTexto">
+      <div class="texto-articulo">
+        <h3 class="tituloNoticia">{{noti.titulo}}</h3>
+        <p class="resumenNoticia">{{noti.resumen}}</p>
+      </div>
+      <div class="btn-articulo">
+        <a href="{% url 'noticias:detalle' noti.id %}" class="leerMas">Leer más</a>
       </div>
     </div>
-    {% endfor %}
-  </article>
+  </div>
+  {% endfor %}
+</article>
+{% else %}
+<h2>Todavia no hay noticias de esta Categori.....</h2>
+{% endif %}
+
 {% endblock %}

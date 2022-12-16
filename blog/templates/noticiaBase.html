@@ -10,6 +10,7 @@
         <div class="buscador">
             Filtrar
             <div class="dropdown">
+              <img class ="img-drop" src="{% static 'img/filtro60.png'%}" alt="">
                 <div class="dropdown-content">
                   <a href="{% url 'noticias:ultima' %}">Mostrar todas</a>
                 {% for c in categoria%}
