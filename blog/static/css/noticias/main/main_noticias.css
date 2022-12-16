@@ -227,7 +227,6 @@
     z-index: 3;
     width: 10%;
     height: 2rem;
-    background-color: #f2f2f2;
     margin-left: 2rem;
     border-radius: 10px;
     transition: .5s;
@@ -242,7 +241,6 @@
 }
 
 .dropdown:hover {
-    background-color: #f0f0f0;
     border: 2px solid var(--fondo-main);
 }
 
@@ -251,7 +249,7 @@
     position: absolute;
     width: 100%;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-    background-color: #f2f2f2;
+    background-color: var(--fondo-principal);
     border-radius: 10px 10px 10px 10px;
     display: none;
   }
@@ -279,7 +277,7 @@
   }
   .dropdown-content a:hover {
     color: #FFFFFF;
-    background-color: var(--fondo-principal);
+    background-color: var(--fondo-main);
     border-radius: 10px 10px 10px 10px;
   }
 
