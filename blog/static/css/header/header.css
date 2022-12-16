@@ -26,7 +26,7 @@ header{
     align-items: flex-start;
     color: rgb(82,82,82);
     font-family: var(--family-verdana);
-    margin-left: 1rem;
+    margin: 0 1rem;
 }
 
 .header_text h2{
@@ -46,6 +46,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     text-shadow: 0 0 10px 10px #333;
+    margin: 0 1rem;
 }
 
 .img1{
@@ -53,7 +54,6 @@ header{
     height: auto;
     display: flex;
     align-items: center;
-    margin-left: 1rem;
 }
 
 .imagen1{
@@ -67,7 +67,7 @@ header{
     height: auto;
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .imagen2{
