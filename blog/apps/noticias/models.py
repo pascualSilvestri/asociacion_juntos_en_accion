@@ -28,7 +28,7 @@ class Comentario(models.Model):
     fecha = models.DateTimeField(auto_now_add = True)
     
     def __str__(self):
-        return self.usuario 
+        return self.comentario 
 
 
 

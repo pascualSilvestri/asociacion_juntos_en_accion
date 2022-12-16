@@ -22,15 +22,22 @@
             </div>
         </section>
         <hr class="divisoria">
+
         <section class="add-comentarios">
-            <form class="add-comentarios-form" action="{% url 'noticias:comentario'%}" method="POST">
+
+            <form class="add-comentarios-form" action="{% url 'noticias:comentar' %}" method="POST">
+
                 {% csrf_token %}
-                <input class="input" name="comentario" max-length="1500" placeholder="Escribe tu comentario..."></input>
+                <textarea class="input" name="comentario" max-length="1500" placeholder="Escribe tu comentario..."></textarea>
+                <input type="text" name="id_noticia" value="{{noticia.id}}" hidden="">
                 <div class="btn-detalle">
-                    <button type="submit" value="Comentar" class="button">Comentar</button>
+                    <button type="submit" class="button">Comentar</button>
                 </div>
+
             </form>
+
         </section>
+        
         <hr class="divisoria">
         <section class="get-comentarios">
             <h3 class="titulo_comentarios">Comentarios:</h3>
