@@ -13,9 +13,15 @@ def ultimasNoti(request):
     noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
     noticia = Noticia.objects.all()
     categoria = Categoria.objects.all().order_by('nombre')
+    # Modifcicar para agrear antiguo y nuevo
+    antiguo = Categoria.objects.all().order_by('id')
+    nuevas = Categoria.objects.all().order_by('-id')
+        
     context ={'noticiaUlt':noticiaUlt,
               'noticia':noticia,
-              'categoria':categoria}
+              'categoria':categoria,
+              'antiguo':antiguo,
+              'nuevas':nuevas}
     return render(request,'noticia/noticias.html',context)
 
 
