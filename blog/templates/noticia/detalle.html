@@ -3,47 +3,52 @@
 {% block title %} Noticia {{noticia.titulo}}{% endblock %} 
 {% block contenedor %}
 <main class="detalle">
-    <section class="content-detalle-noticia">
-        <div class="titulo-detalle-noticia">
-            <h2>{{noticia.titulo}}</h2>
-        </div>
-        <div class="img-detalle-noticia">
-            <img src="{{noticia.imagen.url}}">
-        </div>
-        <div class="fecha-categoria-detalle-noticia">
-            <p>FECHA: {{noticia.fecha}}</p>
-            <p>CATEGORIA: {{noticia.categoría_noticia}}</p>
-        </div>
-        <div class="cuerpo-detalle-noticia">
-            <p>{{noticia.cuerpo}}</p>
-        </div>
-    </section>
-    <section class="add-comentarios">
-        <form class="add-comentarios-form" action="{% url 'noticias:comentario'%}" method="POST">
-            {% csrf_token %}
-            <h4>Comenta aquí..</h4>
-            <textarea name="comentario" cols="30" rows="10" max-length="1500"></textarea>
-            <div class="btn-detalle">
-                <button type="submit" value="Comentar">Comentar</button>
+    <div class="contenedor_detalle">
+        <section class="content-detalle-noticia">
+            <div class="titulo-detalle-noticia">
+                <h2>{{noticia.titulo}}</h2>
             </div>
-        </form>
-        
-    </section>
-    <section class="get-comentarios">
-        {% for c in comentario %}
-        <div class="card-content-comentario">
-            <div class="card-usuario">
-                <h4>{{c.usuario}}</h4>
+            <div class="img-detalle-noticia">
+                <img src="{{noticia.imagen.url}}">
             </div>
-            <div class="card-comentario">
-                <p>{{c.comentario}}</p>
+            <div class="fecha-categoria-detalle-noticia">
+                <p>FECHA: {{noticia.fecha}}</p>
+                <p>CATEGORÍA: {{noticia.categoría_noticia}}</p>
             </div>
-            <div class="card-fecha">
-                <p>{{c.fecha}}</p>
+            <hr class="divisoria">
+            <div class="cuerpo-detalle-noticia">
+                <h3>Noticia:</h3>
+                <p>{{noticia.cuerpo}}</p>
             </div>
-        </div>
-        {% endfor %}
-    </section>    
+        </section>
+        <hr class="divisoria">
+        <section class="add-comentarios">
+            <form class="add-comentarios-form" action="{% url 'noticias:comentario'%}" method="POST">
+                {% csrf_token %}
+                <input class="input" name="comentario" max-length="1500" placeholder="Escribe tu comentario..."></input>
+                <div class="btn-detalle">
+                    <button type="submit" value="Comentar" class="button">Comentar</button>
+                </div>
+            </form>
+        </section>
+        <hr class="divisoria">
+        <section class="get-comentarios">
+            <h3 class="titulo_comentarios">Comentarios:</h3>
+            {% for c in comentario %}
+            <div class="card-content-comentario">
+                <div class="card-usuario">
+                    <h4>{{c.usuario}}</h4>
+                </div>
+                <div class="card-fecha">
+                    <p>{{c.fecha}}</p>
+                </div>
+                <div class="card-comentario">
+                    <p>{{c.comentario}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>   
+    </div> 
 </main>
 
 {% endblock %}
