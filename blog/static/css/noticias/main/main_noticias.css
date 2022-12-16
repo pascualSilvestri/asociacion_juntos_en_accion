@@ -231,7 +231,7 @@
     margin-left: 2rem;
     border-radius: 10px;
     transition: .5s;
-    padding-top: .8rem;
+    padding-top: 1rem;
 }
 
 .dropdown:hover {
@@ -255,7 +255,7 @@
     color: #000000;
     padding: 5px;
     text-decoration: none;
-    font-size: .8rem;
+    font-size: .5rem;
   }
   .dropdown-content a:hover {
     color: #FFFFFF;
