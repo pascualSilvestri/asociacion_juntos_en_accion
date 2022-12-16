@@ -10,7 +10,7 @@ header{
 }
 
 .contenedorInfo{
-    max-width: 110rem;
+    max-width: 120rem;
     height: 100%;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@ header{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    color: rgb(82,82,82);
+    color: #5c5c5c;
     font-family: var(--family-verdana);
     margin: 0 1rem;
 }
