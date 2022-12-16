@@ -1,6 +1,8 @@
 header{
     width: 100%;
-    height: 23rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
     background-color: var(--fondo-principal);
     padding: 2rem;
     border-bottom: 10px solid rgb(59, 59, 59);
@@ -8,15 +10,15 @@ header{
 }
 
 .contenedorInfo{
-    width: 100%;
+    max-width: 110rem;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .header_text{
-    width: 25%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -24,15 +26,17 @@ header{
     align-items: flex-start;
     color: rgb(82,82,82);
     font-family: var(--family-verdana);
+    margin-left: 1rem;
 }
 
 .header_text h2{
-   font-size: 1.8rem;
+   font-size: 1.6rem;
+   margin-bottom: 1rem;
 }
+
 
 .header_text p{
     text-align: justify;
-    line-height: 1rem;
     font-size: .9rem;
 }
 
@@ -40,13 +44,16 @@ header{
     width: 70%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-shadow: 0 0 10px 10px #333;
 }
 
 .img1{
-    width: 45%;
-    height: 130%;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
 }
 
 .imagen1{
@@ -56,17 +63,19 @@ header{
 }
 
 .img2{
-    width: 45%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-left: 1rem;
 }
 
 .imagen2{
     width: 100%;
-    height: 80%;
+    height: auto;
 }
+
+/* Fin del Bloque de imágenes */
 
 .bienvenido{
     width: auto;
