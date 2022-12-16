@@ -16,7 +16,6 @@
                 {% for c in categoria%}
                   <a href="{%  url 'noticias:filtro' c.id  %}">{{ c.nombre }}</a>
                 {% endfor %}
-                <a href="{% url 'noticias:ultima' %}">Mostrar todas</a>
                 </div>
             </div>
         </div>
