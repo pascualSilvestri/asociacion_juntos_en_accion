@@ -12,7 +12,7 @@ from apps.usuarios.models import Usuario
 def ultimasNoti(request):
     noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
     noticia = Noticia.objects.all()
-    categoria = Categoria.objects.all()
+    categoria = Categoria.objects.all().order_by('nombre')
     context ={'noticiaUlt':noticiaUlt,
               'noticia':noticia,
               'categoria':categoria}
@@ -21,7 +21,7 @@ def ultimasNoti(request):
 
 def detalle_noticia(request, pk):
     n = Noticia.objects.get(pk = pk)
-    c = Comentario.objects.all().filter(noticia = n.pk)
+    c = Comentario.objects.all().filter(noticia = n.pk).order_by('-id')
     context= {'noticia':n,
               'comentario':c}
     return render(request,'noticia/detalle.html',context)
@@ -39,13 +39,13 @@ def filtro_categoria(request,pk):
 
 
 @login_required
-def comentario_add(request):
+def Comentario_add(request):
     com = request.POST.get('comentario',None)
     usu = request.user
     noti = request.POST.get('id_noticia', None)# OBTENGO LA PK
     noticia = Noticia.objects.get(pk = noti) #BUSCO LA NOTICIA CON ESA PK
-    coment = Comentario.objects.create(usuario = usu, noticia = noticia, texto = com)
+    coment = Comentario.objects.create(usuario = usu, noticia = noticia, comentario = com)
 
-    return redirect(reverse_lazy('noticias/detalle.html', kwargs={'pk':noti}))
+    return redirect(reverse_lazy('noticias:detalle', kwargs={'pk':noti}))
     
 
