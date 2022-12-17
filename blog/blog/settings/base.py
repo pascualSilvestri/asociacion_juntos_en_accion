@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-o19bz)(6om%&r3bbku0km=s1z@d*4%tk1u&rc(((=v5o8lrkwc
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
+TIME_ZONE = 'America/Buenos_Aires'
+
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 LOGIN_URL = reverse_lazy('login')
