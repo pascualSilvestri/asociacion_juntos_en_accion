@@ -1,0 +1,58 @@
+.main-historia{
+    width: 100%;
+    height: auto;
+    padding: 0 5rem;
+    background-color: var(--fondo-principal);
+    color:#f2f2f2;
+    font-family: var(--family-verdana);
+}
+
+.main-historia h1{
+    width: 100%;
+    height: 3rem;
+    padding: 2rem 1rem;
+    background-color: var(--fondo-header);
+}
+
+.contenido{
+    background-color: var(--fondo-header);
+    padding: 2rem 1rem;
+
+}
+
+.contenido h2{
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--fondo-principal);
+
+}
+
+.contenido p{
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--fondo-nav);
+    box-shadow: 0 0 5px 1px #a0a0a0;
+    margin: 2rem 0 ;
+    line-height: 1.5rem;
+}
+
+.contenido ul{
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--fondo-nav);
+    box-shadow: 0 0 5px 1px #a0a0a0;
+    margin: 2rem 0 ;
+
+}
+
+.contenido ul>li{
+    margin: .5rem 0;
+    line-height: 1.4rem;
+
+}

@@ -8,3 +8,6 @@ def Home(request):
 
 def Noticias(request):
     return render(request, 'noticias.html')
+
+def Historia(request):
+    return render(request, 'historia.html')
