@@ -165,11 +165,11 @@ nav{
         z-index: 10;
     }
     .contenedor_nav{
-        width: 100vw;
+        width: 50vw;
         height: 85vh;
         position:fixed;
         top:6rem;
-        left: 100rem;
+        right: -100rem;
         margin: 0;
         background-color: var(--family-verdana);
         justify-content: space-around;
@@ -215,7 +215,7 @@ nav{
 
     .mostrar{
         top:6rem;
-        left: 0;
+        right: 0;
     }
     .no-mostrar{
         left: 100rem;

@@ -157,29 +157,29 @@ function divError(error, cont, clase) {
     cont.append(div);
 }
 
-btn.addEventListener("click", e => {    
-    if (!errorA && !errorE && !errorP && !errorN && !errorPP && !errorU && nombre.value != "" && email.value != "" && usuario.value != "") {
-        alert("Envio con exito");
-        nombre.value = "";
-        apellido.value = "";
-        email.value = "";
-        usuario.value = "";
-        password1.value = "";
-        password2.value = "";
-        sinEstado(cont_nombre);
-        sinEstado(cont_email);
-        sinEstado(cont_usuario);
-        sinEstado(cont_mensaje);
-        sinEstado(cont_password1);
-        sinEstado(cont_password2);
-        eliminarError(".error-btn");
-        errorB = false
-    } else
-        if (!errorB) {
-            divError(errorMensaje['btnError'], cont_form, "error-btn");
-            errorB = true
-        }
-});
+// btn.addEventListener("click", e => {    
+//     if (!errorA && !errorE && !errorP && !errorN && !errorPP && !errorU && nombre.value != "" && email.value != "" && usuario.value != "") {
+//         alert("Envio con exito");
+//         nombre.value = "";
+//         apellido.value = "";
+//         email.value = "";
+//         usuario.value = "";
+//         password1.value = "";
+//         password2.value = "";
+//         sinEstado(cont_nombre);
+//         sinEstado(cont_email);
+//         sinEstado(cont_usuario);
+//         sinEstado(cont_mensaje);
+//         sinEstado(cont_password1);
+//         sinEstado(cont_password2);
+//         eliminarError(".error-btn");
+//         errorB = false
+//     } else
+//         if (!errorB) {
+//             divError(errorMensaje['btnError'], cont_form, "error-btn");
+//             errorB = true
+//         }
+// });
 
 validar(nombre, cont_nombre);
 validar(apellido, cont_apellido);

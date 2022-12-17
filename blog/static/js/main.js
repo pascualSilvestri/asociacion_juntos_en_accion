@@ -50,9 +50,6 @@ if(tituloHistoria == titulo){
 console.log("hola");
 
 // fin del bloque 
-
-
-
 document.addEventListener("scroll", e => {
     console.log("hola");
     let scrolly = e.path[1].window.scrollY;
@@ -85,8 +82,3 @@ dropdown.addEventListener('click',()=>{
     dropdown_content.classList.toggle('activar_select')
     img.classList.toggle('img-none')
 });
-// Pruebas
-
-// const noticia = document.querySelector('.noticia');
-
-// noticia.style.backgroundImage = "url('/media/noticias/messiPaises.jpeg')";

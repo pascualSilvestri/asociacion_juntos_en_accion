@@ -58,3 +58,47 @@
     text-align: justify;
 
 }
+
+@media only screen and (max-width: 720px){
+    .main-historia{
+
+        padding: 0 2rem;
+
+    }
+    
+}
+
+
+@media only screen and (max-width: 450px){
+    .main-historia{
+
+        padding: 0 2rem;
+
+    }
+
+    .main-historia h1{
+        width: 100%;
+        height: auto;
+        padding: 1rem .5rem;
+        background-color: var(--fondo-header);
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contenido h2{
+
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+    
+    }
+    
+    .contenido ul>li,.contenido p{
+        padding: 1rem;
+        margin: 1rem 0 ;
+        line-height: 1.5rem;
+        font-size: .8rem;
+
+    }
+    
+}
