@@ -14,14 +14,14 @@ def ultimasNoti(request):
     noticia = Noticia.objects.all()
     categoria = Categoria.objects.all().order_by('nombre')
     # Modifcicar para agrear antiguo y nuevo
-    antiguo = Categoria.objects.all().order_by('id')
-    nuevas = Categoria.objects.all().order_by('-id')
+
+    
         
     context ={'noticiaUlt':noticiaUlt,
               'noticia':noticia,
               'categoria':categoria,
-              'antiguo':antiguo,
-              'nuevas':nuevas}
+              
+              }
     return render(request,'noticia/noticias.html',context)
 
 
@@ -31,6 +31,8 @@ def detalle_noticia(request, pk):
     context= {'noticia':n,
               'comentario':c}
     return render(request,'noticia/detalle.html',context)
+
+
 
 def filtro_categoria(request,pk):
     n = Noticia.objects.filter( categoría_noticia = pk)
@@ -53,6 +55,31 @@ def filtro_categoria(request,pk):
               'ban':ban}
     return render(request,'noticia/categoria.html',context)
 
+
+def filtro_desc(request):
+    noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
+    noticia = Noticia.objects.all()
+    categoria = Categoria.objects.all()
+    nuevas = Noticia.objects.all().order_by('id')
+    context= {
+              'noticiaUlt':noticiaUlt,
+              'noticia':noticia,
+              'categoria':categoria,
+              'nuevas':nuevas}
+    return render(request,'noticia/desc.html',context)
+
+def filtro_asce(request):
+    noticiaUlt = Noticia.objects.order_by('id').reverse()[:3]
+    noticia = Noticia.objects.all()
+    categoria = Categoria.objects.all()
+    antiguo = Noticia.objects.all().order_by('id').reverse()
+    
+    context= {
+              'noticiaUlt':noticiaUlt,
+              'noticia':noticia,
+              'categoria':categoria,
+              'antiguo':antiguo}
+    return render(request,'noticia/asce.html',context)
 
 @login_required
 def Comentario_add(request):

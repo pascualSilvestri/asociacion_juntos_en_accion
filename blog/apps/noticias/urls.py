@@ -12,6 +12,10 @@ urlpatterns = [
     # path('', views.Mostrar.as_view(), name = 'noticias'),
     path('Detalles/<int:pk>', views.detalle_noticia, name = 'detalle'),
     path('Categoria/<int:pk>', views.filtro_categoria, name = 'filtro'),
-    path('Comentario/',views.Comentario_add, name= 'comentar')
+    path('Acendente/', views.filtro_asce, name = 'asce'),
+    path('', views.filtro_desc, name = 'desc'),
 	
+ 
+    path('Comentario/',views.Comentario_add, name= 'comentar'),
+
 ]
