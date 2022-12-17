@@ -165,7 +165,7 @@ nav{
         z-index: 10;
     }
     .contenedor_nav{
-        width: 50vw;
+        width: 100vw;
         height: 85vh;
         position:fixed;
         top:6rem;
@@ -191,6 +191,22 @@ nav{
 
     .navigation ul{
         flex-direction: column;
+    }
+
+    .navigation ul>li{
+        
+        border-bottom: 2px solid var(--fondo-principal);
+    }
+
+    .navigation ul li>a{
+        
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .login a{
+        font-weight: bold;
+        font-size: 1.4rem;
     }
 
     .logo{
