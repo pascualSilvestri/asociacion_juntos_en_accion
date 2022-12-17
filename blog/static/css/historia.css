@@ -38,6 +38,7 @@
     box-shadow: 0 0 5px 1px #a0a0a0;
     margin: 2rem 0 ;
     line-height: 1.5rem;
+    text-align: justify;
 }
 
 .contenido ul{
@@ -52,7 +53,8 @@
 }
 
 .contenido ul>li{
-    margin: .5rem 0;
+    margin: .8rem 0;
     line-height: 1.4rem;
+    text-align: justify;
 
 }
