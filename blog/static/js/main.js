@@ -5,6 +5,7 @@ const mision = document.querySelector('.mision');
 const recursos = document.querySelector('.recursos');
 const noticias = document.querySelector('.noticias');
 const contacto = document.querySelector('.contacto');
+const historia = document.querySelector('.historia');
 const btnArriva = document.querySelector(".up")
 const menu = document.querySelector('.contenedor_nav');
 const btnMenu = document.querySelector('.menu')
@@ -15,7 +16,7 @@ const dropdown = document.querySelector('.dropdown')
 
 const title = 'Asociacion Juntos en accion |'
 const tituloNoticia = 'Asociacion Juntos en accion | Noticias'
-const tituloRecursos = 'Asociacion Juntos en accion | Recursos'
+const tituloHistoria = 'Asociacion Juntos en accion | Historia'
 const tituloRegistrar = 'Asociacion Juntos en accion | Registrar'
 const tituloLogin = 'Asociacion Juntos en accion | Login'
 
@@ -38,6 +39,15 @@ if(tituloNoticia == titulo){
 }else{
     noticias.style.display = 'flex'
 }
+
+if(tituloHistoria == titulo){
+    historia.style.display = 'none'
+    
+}else{
+    historia.style.display = 'flex'
+}
+
+
 
 
 // fin del bloque 
