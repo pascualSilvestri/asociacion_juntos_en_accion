@@ -1,0 +1,27 @@
+{% extends 'noticiaBase.html' %} 
+{% load static %} 
+{% block title %} Noticias{% endblock %} 
+
+{% block noticia %}
+
+
+
+<article class="articulo">
+  {% for noti in nuevas %}
+  <div class="contenedorNoticia">
+    <img src="{{noti.imagen.url}}" alt="Imágen Noticia" class="img-noticia">
+    <div class="contenedorTexto">
+      <div class="texto-articulo">
+        <h3 class="tituloNoticia">{{noti.titulo}}</h3>
+        <p class="resumenNoticia">{{noti.resumen}}</p>
+      </div>
+      <div class="btn-articulo">
+        <a href="{% url 'noticias:detalle' noti.id %}" class="leerMas">Leer más</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</article>
+
+
+{% endblock %}
