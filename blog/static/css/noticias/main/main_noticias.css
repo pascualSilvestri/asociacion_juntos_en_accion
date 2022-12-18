@@ -85,6 +85,25 @@
     padding: 1rem 0;
 }
 
+.sin_noticias{
+   background-image: url(/static/img/construccion.png);
+   background-repeat: repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.mensaje_construccion{
+    display: none;
+    font-family: var(--family-verdana);
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--fondo-principal);
+    background-color: #292929e7;
+    padding: 1rem;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
 .noticia{
     min-width: 50%;
     height: 20rem;
@@ -182,6 +201,14 @@
 }
 
 /* carrusel */
+
+.izquierda{
+    transform: translateX(-50%);
+}
+
+.derecha{
+    transform: translateX(50%);
+}
 
 .act{
     transform: translateX(0%);
