@@ -9,7 +9,7 @@
     <div class="img-forms div-img-left">
       <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
     </div>
-    <form class="form-registrar" action="" method="post">
+    <form class="form-registrar" method="POST">
       {% csrf_token %}
       {% comment %} {{form.as_p}} {% endcomment %}
       <div class="contenedor_input cont_nombre">

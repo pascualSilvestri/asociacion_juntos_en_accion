@@ -14,7 +14,7 @@ const dropdown_content = document.querySelector('.dropdown-content');
 const dropdown = document.querySelector('.dropdown');
 
 
-const title = 'Asociacion Juntos en accion |';
+const title = 'Asociacion Juntos en accion | Home';
 const tituloNoticia = 'Asociacion Juntos en accion | Noticias';
 const tituloHistoria = 'Asociacion Juntos en accion | Historia';
 const tituloRegistrar = 'Asociacion Juntos en accion | Registrar';
@@ -48,11 +48,10 @@ if(tituloHistoria == titulo){
     historia.style.display = 'flex';
 }
 
-console.log("hola");
+
 
 // fin del bloque 
 document.addEventListener("scroll", e => {
-    console.log("hola");
     let scrolly = e.path[1].window.scrollY;
     if (scrolly >= 200) {
         btnArriva.style.display = "flex";
