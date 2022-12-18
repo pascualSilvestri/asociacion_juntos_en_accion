@@ -51,91 +51,94 @@ function valido(cont) {
 
 
 function validar(input, cont) {
-    input.addEventListener("blur", e => {
-        if (e.target.id == "nombre") {
-
-            if (input.value != "" && redex["nombre"].test(input.value)) {
-                valido(cont)
-                eliminarError(".nombre")
-                errorN = false
-            } else
-                if (!errorN) {
-                    error(cont)
-                    divError(errorMensaje['nombre'], cont_nombre, "nombre");
-                    errorN = true
-                }
-        }
-
-        if (e.target.id == "apellido") {
-
-            if (input.value != "" && redex["apellido"].test(input.value)) {
-                valido(cont)
-                eliminarError(".apellido")
-                errorA = false
-            } else
-                if (!errorA) {
-                    error(cont)
-                    divError(errorMensaje['apellido'], cont_apellido, "apellido");
-                    errorA = true
-                }
-        }
-
-        if (e.target.id == "usuario") {
-
-            if (input.value != "" && redex["usuario"].test(input.value)) {
-                valido(cont)
-                eliminarError(".usuario")
-                errorU = false
-            } else
-                if (!errorU) {
-                    error(cont)
-                    divError(errorMensaje['usuario'], cont_usuario, "usuario");
-                    errorU = true
-                }
-        }
-
-        if (e.target.id == "email") {
-
-            if (input.value != "" && redex["email"].test(input.value)) {
-                console.log(cont)
-                valido(cont)
-                eliminarError(".email")
-                errorE = false
-            } else
-                if (!errorE) {
-                    error(cont)
-                    divError(errorMensaje['email'], cont_email, "email");
-                    errorE = true
-                }
-        }
-
-        if (e.target.id == "password1") {
-
-            if (input.value != "" && redex["usuario"].test(input.value)) {
-                valido(cont)
-                eliminarError(".password1")
-                errorP = false
-            } else
-                if (!errorP) {
-                    error(cont)
-                    divError(errorMensaje['usuario'], cont_password1, "password1");
-                    errorP = true
-                }
-        }
-        if (e.target.id == "password2") {
-
-            if (input.value != "" && redex["usuario"].test(input.value)) {
-                valido(cont)
-                eliminarError(".password2")
-                errorPP = false
-            } else
-                if (!errorPP) {
-                    error(cont)
-                    divError(errorMensaje['usuario'], cont_password2, "password2");
-                    errorPP = true
-                }
-        }
-    });
+    if (input != null){
+        input.addEventListener("blur", e => {
+            if (e.target.id == "nombre") {
+    
+                if (input.value != "" && redex["nombre"].test(input.value)) {
+                    valido(cont)
+                    eliminarError(".nombre")
+                    errorN = false
+                } else
+                    if (!errorN) {
+                        error(cont)
+                        divError(errorMensaje['nombre'], cont_nombre, "nombre");
+                        errorN = true
+                    }
+            }
+    
+            if (e.target.id == "apellido") {
+    
+                if (input.value != "" && redex["apellido"].test(input.value)) {
+                    valido(cont)
+                    eliminarError(".apellido")
+                    errorA = false
+                } else
+                    if (!errorA) {
+                        error(cont)
+                        divError(errorMensaje['apellido'], cont_apellido, "apellido");
+                        errorA = true
+                    }
+            }
+    
+            if (e.target.id == "usuario") {
+    
+                if (input.value != "" && redex["usuario"].test(input.value)) {
+                    valido(cont)
+                    eliminarError(".usuario")
+                    errorU = false
+                } else
+                    if (!errorU) {
+                        error(cont)
+                        divError(errorMensaje['usuario'], cont_usuario, "usuario");
+                        errorU = true
+                    }
+            }
+    
+            if (e.target.id == "email") {
+    
+                if (input.value != "" && redex["email"].test(input.value)) {
+                    console.log(cont)
+                    valido(cont)
+                    eliminarError(".email")
+                    errorE = false
+                } else
+                    if (!errorE) {
+                        error(cont)
+                        divError(errorMensaje['email'], cont_email, "email");
+                        errorE = true
+                    }
+            }
+    
+            if (e.target.id == "password1") {
+    
+                if (input.value != "" && redex["usuario"].test(input.value)) {
+                    valido(cont)
+                    eliminarError(".password1")
+                    errorP = false
+                } else
+                    if (!errorP) {
+                        error(cont)
+                        divError(errorMensaje['usuario'], cont_password1, "password1");
+                        errorP = true
+                    }
+            }
+            if (e.target.id == "password2") {
+    
+                if (input.value != "" && redex["usuario"].test(input.value)) {
+                    valido(cont)
+                    eliminarError(".password2")
+                    errorPP = false
+                } else
+                    if (!errorPP) {
+                        error(cont)
+                        divError(errorMensaje['usuario'], cont_password2, "password2");
+                        errorPP = true
+                    }
+            }
+        });
+    }
+    
 
 }
 

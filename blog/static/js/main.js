@@ -27,7 +27,8 @@ console.log(tituloNoticia);
 if (title != titulo){
     home.style.display = 'flex';
     mision.style.display = 'none';
-    bienvenido.style.display = 'none';
+    if (bienvenido != null)
+        bienvenido.style.display = 'none';
 }else{
     home.style.display = 'none';
     mision.style.display = 'flex';
@@ -76,9 +77,13 @@ mision.addEventListener('click', ()=>{
     menu.classList.toggle("mostrar")
 });
 
-dropdown.addEventListener('click',()=>{
-    const img = document.querySelector('.img-drop');
-    dropdown.classList.toggle("dropdown-active")
-    dropdown_content.classList.toggle('activar_select')
-    img.classList.toggle('img-none')
-});
+
+if (dropdown != null){
+    dropdown.addEventListener('click',()=>{
+        const img = document.querySelector('.img-drop');
+        dropdown.classList.toggle("dropdown-active")
+        dropdown_content.classList.toggle('activar_select')
+        img.classList.toggle('img-none')
+    });
+}
+
