@@ -9,7 +9,7 @@
     <div class="img-forms div-img-left">
       <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
     </div>
-    <form class="form-registrar" action="" method="post">
+    <form class="form-registrar"  method="post">
       {% csrf_token %}
       {% comment %} {{form.as_p}} {% endcomment %}
       <div class="contenedor_input cont_nombre">
@@ -42,7 +42,7 @@
         <input type="password" name="{{form.password2.name}}" id="password2" />
       </div>
       
-        <button type="submit" class="btn-registrar" value="Confirmar">Confirmar</button>
+        <input type="submit" class="btn-registrar" value="Confirmar"/>
     </form>
     <div class="img-forms">
       <img src="{% static 'img/logoEscuela.png'%}" alt="logo" />

@@ -163,13 +163,6 @@ function divError(error, cont, clase) {
 // if (btn != null){
 //     btn.addEventListener("click", e => {    
 //         if (!errorA && !errorE && !errorP && !errorN && !errorPP && !errorU && nombre.value != "" && email.value != "" && usuario.value != "") {
-//             alert("Envio con exito");
-//             nombre.value = "";
-//             apellido.value = "";
-//             email.value = "";
-//             usuario.value = "";
-//             password1.value = "";
-//             password2.value = "";
 //             sinEstado(cont_nombre);
 //             sinEstado(cont_email);
 //             sinEstado(cont_usuario);
@@ -180,7 +173,6 @@ function divError(error, cont, clase) {
 //             errorB = false
 //         } else
 //             if (!errorB) {
-//                 divError(errorMensaje['btnError'], cont_form, "error-btn");
 //                 errorB = true
 //             }
 //     });

@@ -48,11 +48,10 @@ if(tituloHistoria == titulo){
     historia.style.display = 'flex';
 }
 
-console.log("hola");
+
 
 // fin del bloque 
 document.addEventListener("scroll", e => {
-    console.log("hola");
     let scrolly = e.path[1].window.scrollY;
     if (scrolly >= 200) {
         btnArriva.style.display = "flex";
