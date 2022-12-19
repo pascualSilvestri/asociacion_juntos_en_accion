@@ -1,17 +1,28 @@
 const btn_left = document.querySelector(".btn-left");
 const btn_rigth = document.querySelector(".btn-rigth");
+const cambio_noticias = document.getElementsByClassName("cambio-noticias");
 const noticia = document.getElementsByClassName("noticia");
 const articulo = document.getElementsByClassName("contenedor-ultimas_noticias")[0];
 const mensaje = document.getElementsByClassName("mensaje_construccion")[0];
 let id;
 let carrousel = false;
 
+
+//Configuraciones Iniciales de las posiciones de las noticias(Cuando ni bien arranca el programa)
 if (noticia.length == 0){
     articulo.classList.add('sin_noticias');
     mensaje.style.display = 'flex';
-} else if (noticia.length < 3 && noticia.length > 1){
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
+} else if (noticia.length == 2){
     noticia[0].classList.add('noticia1_2');
     noticia[1].classList.add('noticia1_2');
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
+} else if (noticia.length == 1){
+    noticia[0].classList.add('noticia1_2');
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
 } else {
     noticia[0].classList.add('noticia3');
     noticia[1].classList.add('noticia3');
@@ -23,7 +34,6 @@ if (noticia.length == 0){
 }
 
 
-// // Configuraciones Iniciales de las posiciones de las noticias(Cuando ni bien arranca el programa)
 // if (noticia[0]!=null){
 //     noticia[0].classList.add('act')
 // }
