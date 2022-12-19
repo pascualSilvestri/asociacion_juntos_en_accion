@@ -54,6 +54,7 @@ const add_remove_class = (elem,arg1,arg2) => {
 
 // Función para el movimiento automático del carrousel
 const moverCarrusel = () => {
+    clearInterval(id);
     id = setInterval(()=>{
         const act = document.querySelector(".act");
         const right = document.querySelector(".right");
