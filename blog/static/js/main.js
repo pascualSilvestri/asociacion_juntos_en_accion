@@ -49,7 +49,6 @@ if(tituloHistoria == titulo){
 }
 
 
-
 // fin del bloque 
 document.addEventListener("scroll", e => {
     let scrolly = e.path[1].window.scrollY;

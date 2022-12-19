@@ -120,12 +120,12 @@ main{
     }
     
     .card_info p{
-        font-size: .5rem;
+        font-size: .7rem;
         text-align: justify;
     }
 
     .card_info ul>li{
-        font-size: .5rem;
+        font-size: .7rem;
     }
 
 }

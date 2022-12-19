@@ -1,21 +1,48 @@
 const btn_left = document.querySelector(".btn-left");
 const btn_rigth = document.querySelector(".btn-rigth");
+const cambio_noticias = document.getElementsByClassName("cambio-noticias");
 const noticia = document.getElementsByClassName("noticia");
 const articulo = document.getElementsByClassName("contenedor-ultimas_noticias")[0];
+const mensaje = document.getElementsByClassName("mensaje_construccion")[0];
 let id;
-
-// Configuraciones Iniciales de las posiciones de las noticias(Cuando ni bien arranca el programa)
-if (noticia[0]!=null){
-    noticia[0].classList.add('act')
-}
-if (noticia[1]!=null){
-    noticia[1].classList.add('right')
-}
-if (noticia[2]!=null){
-    noticia[2].classList.add('left')
-}
+let carrousel = false;
 
 
+//Configuraciones Iniciales de las posiciones de las noticias(Cuando ni bien arranca el programa)
+if (noticia.length == 0){
+    articulo.classList.add('sin_noticias');
+    mensaje.style.display = 'flex';
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
+} else if (noticia.length == 2){
+    noticia[0].classList.add('noticia1_2');
+    noticia[1].classList.add('noticia1_2');
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
+} else if (noticia.length == 1){
+    noticia[0].classList.add('noticia1_2');
+    cambio_noticias[0].style.display = 'none';
+    cambio_noticias[1].style.display = 'none';
+} else {
+    noticia[0].classList.add('noticia3');
+    noticia[1].classList.add('noticia3');
+    noticia[2].classList.add('noticia3');
+    noticia[0].classList.add('act');
+    noticia[1].classList.add('right');
+    noticia[2].classList.add('left');
+    carrousel = true;
+}
+
+
+// if (noticia[0]!=null){
+//     noticia[0].classList.add('act')
+// }
+// if (noticia[1]!=null){
+//     noticia[1].classList.add('right')
+// }
+// if (noticia[2]!=null){
+//     noticia[2].classList.add('left')
+// }
 
 
 // Función que añade y remueve las clases
@@ -27,6 +54,7 @@ const add_remove_class = (elem,arg1,arg2) => {
 
 // Función para el movimiento automático del carrousel
 const moverCarrusel = () => {
+    clearInterval(id);
     id = setInterval(()=>{
         const act = document.querySelector(".act");
         const right = document.querySelector(".right");
@@ -48,7 +76,9 @@ const moverCarrusel = () => {
     
 }
 
-moverCarrusel();
+if (carrousel){
+    moverCarrusel();
+}
 
 
 // Cuando se presione el boton left, hacer lo siguiente:
