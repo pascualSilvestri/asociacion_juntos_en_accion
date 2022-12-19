@@ -77,19 +77,12 @@
     width: 100%;
     height: 22rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--fondo-main);
     overflow-x: hidden;
     position: relative;
     padding: 1rem 0;
-}
-
-.sin_noticias{
-   background-image: url(/static/img/construccion.png);
-   background-repeat: repeat;
-   background-size: cover;
-   background-position: center;
 }
 
 .mensaje_construccion{
@@ -104,7 +97,40 @@
     border-radius: 10px;
 }
 
-.noticia{
+.sin_noticias{
+   background-image: url(/static/img/construccion.png);
+   background-repeat: repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.noticia1_2{
+    min-width: 40%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.noticia1_2:hover{
+    transform: scale(1.1);
+}
+
+.noticia1_2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.noticia3{
     min-width: 50%;
     height: 20rem;
     margin: 2rem 3rem;
@@ -123,7 +149,7 @@
     /* animation: carrusel 18s infinite  1s; */
 }
 
-.noticia::before{
+.noticia3::before{
     content: '';
     display: block;
     width: 100%;
@@ -136,7 +162,7 @@
 
 }
 
-.noticia img{
+.noticia3 img{
     height: 100%;
     z-index: 2;
 }
@@ -164,7 +190,7 @@
 }
 
 .descripcion p{
-    font-size: .6rem;
+    font-size: .8rem;
 }
 
 .cambio-noticias{

@@ -4,13 +4,22 @@ const noticia = document.getElementsByClassName("noticia");
 const articulo = document.getElementsByClassName("contenedor-ultimas_noticias")[0];
 const mensaje = document.getElementsByClassName("mensaje_construccion")[0];
 let id;
+let carrousel = false;
 
 if (noticia.length == 0){
     articulo.classList.add('sin_noticias');
     mensaje.style.display = 'flex';
-} else if (noticia.length < 3){
-    noticia[0].classList.add('izquierda');
-    noticia[1].classList.add('derecha');
+} else if (noticia.length < 3 && noticia.length > 1){
+    noticia[0].classList.add('noticia1_2');
+    noticia[1].classList.add('noticia1_2');
+} else {
+    noticia[0].classList.add('noticia3');
+    noticia[1].classList.add('noticia3');
+    noticia[2].classList.add('noticia3');
+    noticia[0].classList.add('act');
+    noticia[1].classList.add('right');
+    noticia[2].classList.add('left');
+    carrousel = true;
 }
 
 
@@ -26,39 +35,39 @@ if (noticia.length == 0){
 // }
 
 
+// Función que añade y remueve las clases
+const add_remove_class = (elem,arg1,arg2) => {
+    elem.classList.add(arg1);
+    elem.classList.remove(arg2);
+}
 
 
-// // Función que añade y remueve las clases
-// const add_remove_class = (elem,arg1,arg2) => {
-//     elem.classList.add(arg1);
-//     elem.classList.remove(arg2);
-// }
-
-
-// // Función para el movimiento automático del carrousel
-// const moverCarrusel = () => {
-//     id = setInterval(()=>{
-//         const act = document.querySelector(".act");
-//         const right = document.querySelector(".right");
-//         const left = document.querySelector(".left");
+// Función para el movimiento automático del carrousel
+const moverCarrusel = () => {
+    id = setInterval(()=>{
+        const act = document.querySelector(".act");
+        const right = document.querySelector(".right");
+        const left = document.querySelector(".left");
         
-//         if(act != null){
-//             add_remove_class(act, 'left', 'act');
-//         }
-//         if(right != null){
-//             add_remove_class(right, 'act', 'right');
-//         }
-//         if(left != null){
-//             add_remove_class(left, 'right', 'left');
-//         }
+        if(act != null){
+            add_remove_class(act, 'left', 'act');
+        }
+        if(right != null){
+            add_remove_class(right, 'act', 'right');
+        }
+        if(left != null){
+            add_remove_class(left, 'right', 'left');
+        }
         
         
         
-//     },6000);
+    },6000);
     
-// }
+}
 
-// moverCarrusel();
+if (carrousel){
+    moverCarrusel();
+}
 
 
 // Cuando se presione el boton left, hacer lo siguiente:
