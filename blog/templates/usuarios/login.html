@@ -7,7 +7,10 @@
       <img src="{% static 'img/logoPrincipal.png'%}" alt="logo" />
     </div>
     <form class="form-registrar form-login" method="POST">
-      {%csrf_token%} {{form.errors}}
+      {%csrf_token%} 
+      {% if  form.errors %}
+        <p>Usuario no registrado</p>
+      {% endif %}
       <div class="contenedor_input">
         <label for="nombre">Nombre </label>
         <input type="text" name="username" id="nombre" placeholder="USUARIO" />
